@@ -1,0 +1,63 @@
+# Preface {.unnumbered}
+
+> "I didn't become a psychology major to learn math!"
+
+I have heard some variant of this...
+
+{{< lipsum 2 >}}
+
+# A Message for the Mathematically Weary
+
+Before proceeding further into this manual, internalize the following:
+
+"If I can add, subtract, multiply, divide, square and square root numbers, *I can do the math*. If I can do these things in the right order, *I can do statistics*. If I know when it is appropriate to do these things, *I can do statistics well*."
+
+That is it. Doing mostly *basic arithmitic* in the *right order* and at the *right time* to answer intersting questions. 
+
+# How to Use this Manual
+
+This "lab manual" is *primarily* intended for students taking a statistics class with me. It closely follows the homework sequence in my statistics classes and it is meant to be a reference for actually implementing the concepts we learn in class. Key concepts will be echoed in this lab manual, but it is not a substitute for the main text.
+
+If you are not a student in one of my classes and are just trying to learn statistics or coding fundamentals in *R* or *Python*, this [could still be helpful](#as-a-general-student).
+
+If you are a professor (especially in a computational field) and you are looking for a way to improve the accessibility of your won course material, this [could be helpful](#as-an-educator)
+
+## As a General Student
+
+If you are hoping to use this as an independent resource for learning statistics or coding fundamentals, this manual could provide a jumping off point. However, other sources will go into much greater depth. Remember, this is a lab manual meant to cover *components* of single class. As such, some material is intentionally incomplete and some examples are intentionally ambiguous. Recommendations for diving deeper:
+
+@aron "Statistics in Psychology"  
+@mckinney2022python "Python for Data Analysis"  
+@Wickham2017R "R for Data Science"  
+
+Beyond these specific sources, ...
+
+## As an Educator
+
+If you are teaching statistics or within another field that involves extensive use of formulas, this manual could provide a template for making materials compliant with ADA Title II... Specifically, this...
+
+Have existing $\LaTeX$ formulas? You can paste them into Quarto documents, add any additional material you would like (e.g., code), and render to HTML. With different rendering settings, you should be able to produce yeilds *screen readable* formulas. 
+
+---
+---
+---
+
+# About
+
+## The Author
+
+As of spring 2026, Garrett Greeley, Ph.D., is a Fixed-Term Assistant Professor in the Psychology Department at Winona State University.
+
+## The Manual
+
+### Goal
+
+This "lab manual" was inspired by a combination of existing resources. First, I have long been a fan of most...
+
+### Support
+
+This project recieved support from the office of Academic and Student Affairs at Minnesota State through the Open Educational Resources (OER) "Learning Circles" program.
+
+### Format
+
+This is a Quarto book. To learn more about Quarto books visit <https://quarto.org/docs/books>.

@@ -1,0 +1,11 @@
+# Introduction
+
+{{< lipsum 4 >}}
+
+See @knuth84 for additional discussion of literate programming.
+
+$$M = \frac{\Sigma X}{N}$$
+
+```{r}
+
+```

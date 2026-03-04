@@ -1,0 +1,33 @@
+project:
+  type: book
+
+book:
+  title: "Null Hypothesis Significance Testing in Psychology"
+  author: "Garrett D. Greeley, Ph.D."
+  date: "2/9/2026"
+  chapters:
+    - index.qmd
+    - chapters/intro.qmd
+    - chapters/02-setup.qmd
+    - chapters/03-probability.qmd
+    - chapters/0x-ztests.qmd
+    - chapters/0x-ttests.qmd
+    - chapters/0x-anova.qmd
+    - chapters/0x-correlation.qmd
+    - chapters/0x-regression.qmd
+    - chapters/0x-advanced-topics.qmd
+    - chapters/summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      - lux
+      - brand
+  pdf:
+    documentclass: scrreprt
+
+
+
