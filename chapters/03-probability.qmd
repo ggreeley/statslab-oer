@@ -1,3 +1,79 @@
-# Probability
+# Central Tendency and Normalizing Data
 
-{{< lipsum >}}
+## Key Concepts
+
+- Mean, Median, Mode
+- Sample Size
+- Variance, Standard Deviation
+- Z Scores
+
+## Introduction...
+
+## Exercises
+
+### Example Study
+
+A researcher measured how high basketball players can jump (i.e., their vertical). This was measured in inches, to the nearest inch. Before their test, some players were randomly assigned to drink 12 ounces of water while different players were randomly assigned to drink 12 ounces of “launch sauce,” a new beverage aimed at enhancing leaping ability for those already undergoing extensive training.
+
+The data looked like this:
+
+Water Group: 24, 25, 25, 30, 33, 22, 36, 40, 27, 32
+Launch Sauce Group: 20, 33, 38, 29, 34, 28, 26, 37, 41, 30, 25, 41
+
+### Questions
+
+What is the formula for the mean? 1 point
+
+
+What is the formula for variance of a sample? 1 point
+
+
+What is the formula for standard deviation of a sample? 1 point
+
+
+What is the formula for computing a z-score from a raw score? 1 point
+
+
+What is the formula for computing a raw score from a z-score? 1 point
+
+
+What is the variance for the Launch Sauce Group (show work)? 1 point
+
+
+What is the standard deviation for the Launch Sauce Group (show work)? 1 point
+
+
+Describe what a z-score is in one sentence (i.e., what are the units, what does it represent). 1 point
+
+
+If a value is equivalent to the mean, its associated z-score will always be what value? 0.5 points
+
+
+If a value is one standard deviation above the mean, its associated z-score will always be what value? 0.5 points
+
+
+TRUE or FALSE: if value “A” is 3.5 standard deviations above the mean, it is fair to say that if we select a new data point at random, it is guaranteed to be less than value “A” because z-scores max out at +/-3.5.  0.5 points
+
+
+TRUE or FALSE: computing z scores allows us to “normalize” data with respect to the mean, which makes it possible to compare performance across different outcomes. 0.5 points
+
+
+What is the z-score for the response of “30” in the Water Group (show work)? 1 point
+
+
+What is the z-score for the response of “37” in the Water Group (show work)? 1 point
+
+
+A z-score of 1.25 in the Launch Sauce Group would correspond to what value (round to nearest inch)? 1 point
+
+
+What is the probability that a random score will be less than z = 0.0? 1 point
+
+
+What is the probability that a random score will come from between z = -1 and z = 1? 1 point
+
+
+What is the probability that a score will be less than 21 in the Launch Sauce Group? 1 point
+
+
+Draw the approximately normal distribution implied by the Launch Sauce Group. On the x-axis, include two scales (raw scores and z-scores), with vertical lines at the mean and +/-1 and +/-2 standard deviations. 1 point

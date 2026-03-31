@@ -1,0 +1,106 @@
+# One-Way ANOVA
+
+## Key Concepts
+
+- Normal Distribution
+- Variance, Standard Deviation
+- Probability Values
+- Cut-Off Points
+
+## Exercises
+
+### Questions (Conceptual)
+
+1) The main purpose of a one-way ANOVA is to:
+- Test whether the variance of one sample equals another sample
+- Test whether three or more group means differ significantly (using variance information)
+- Compare two means only
+- Measure the correlation between two variables
+
+2) In a one-way ANOVA, the total variability in the data is divided into:
+- Within-group and between-group variance components
+- Experimental error and measurement bias
+- Main effects and interactions
+- Population and sampling variance
+
+3) You are comparing exam performance across three different study methods. Which test is most appropriate?
+- One-sample t-test
+- Independent-means t-test
+- One-way ANOVA
+- Chi-square test
+
+4) Why is it problematic to run multiple t-tests instead of an ANOVA when comparing 3+ groups?
+- t-tests cannot handle unequal variances
+- t-tests reduce statistical power
+- Multiple t-tests inflate the Type I error rate
+- ANOVA is easier to compute
+
+
+5) The correct null hypothesis for a one-way ANOVA with three groups is:
+- At least one group mean differs
+- All group means are equal
+- The variances across groups are equal
+- Each sample mean equals zero
+
+6) The F statistic in ANOVA is always positive because:
+- Group means cannot differ in a negative direction
+- The denominator in F is always negative
+- Negative F values are omitted by convention (tradition)
+- F is a ratio of squared quantities (variances)
+
+7) Under the null hypothesis, the expected value of the F ratio is approximately:
+- 0
+- 1
+- -1
+- None of the above
+
+8) An ANOVA yields F(2, 27) = 5.41, p=.010. Assuming alpha = .05, what should you conclude?
+- At least one group mean differs (reject null)
+- All group means are equal (fail to reject null)
+- Not enough information to decide
+- Each sample mean equals zero
+
+9) An ANOVA yields F(2, 27) = 5.41, p=.010. How many GROUPS are being compared?
+- 3
+- 4
+- 2
+- Not enough information to decide
+
+10) An ANOVA yields F(2, 27) = 5.41, p=.010. How many PARTICIPANTS were included in this analysis?
+- 3
+- 27
+- 30
+- Not enough information to decide
+
+### Questions (Computational)
+
+*Note: if direction is not specified, use direction implied by hypothesis*
+
+For each question:
+
+- Write out the null/alternative hypothesis (short hand is fine)
+- Find and report critical/cutoff F value
+- Compute needed information showing steps (e.g., mean, SS between, SS within, df between, df within, MS between, MS within, F value), showing work along the way
+- Complete an ANOVA table using the information you compute
+- Write out a sentence formatted correctly to communicate the key statistical information:
+    - Example: F(df-between, df-within) = F-value, p < or > alpha.
+- Write out a sentence interpreting the result using common language
+
+
+A researcher tests how puzzle solve-time (minutes) changes when people listen to different music. A total of 15 participants were randomized into three conditions (N = 5 each): no music, classical music, popular music. The raw data is included below. Use α = .05. 
+
+No music: 12, 10, 9, 11, 8
+Classical: 15, 14, 13, 16, 15
+Popular: 10, 12, 11, 9, 10
+
+
+
+
+
+A researcher gets halfway done with their stats and asks you to finish. Use the following to complete an ANOVA table, make a decision to reject/fail to reject (at .05), and everything else requested above. 
+
+SSbetween = 240
+SSwithin = 240
+dfbetween = 2
+dfwithin = 12
+

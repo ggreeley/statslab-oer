@@ -1,0 +1,141 @@
+# The Normal Distribution and Uzing Z Scores
+
+## Key Concepts
+
+- Normal Distribution
+- Variance, Standard Deviation
+- Probability Values
+- Cut-Off Points
+
+## Introduction...
+
+## Exercises
+
+### Example Data
+
+Sleep:
+Mean = 8 hours, Standard Deviation = 1 hour
+
+Intelligence:
+Mean = 100 points, Standard Deviation = 15 points
+
+Height:
+Mean = 68 inches, Standard Deviation = 4 inches
+
+Memory: 
+Mean = 20 items, Standard Deviation = 5 items
+
+### Questions (Conceptual)
+
+1) Dr. A is interested in weather his patient (Patient 47) is having sleep disturbances that are different from the known average (see above).
+
+Draw the normal distribution implied by the sleep information above (1 point)
+
+
+
+Write out the null and alternative hypotheses that are implied by Dr. A’s interest (2 points)
+
+
+2) Dr. B is interested in weather his new drug (Intelli-Juice) improves intelligence scores compared to the known average (see above).
+
+Draw and label the normal distribution implied by the intelligence information above (1 point)
+
+
+
+
+Write out the null and alternative hypotheses that are implied by Dr. B’s interest (2 points)
+
+
+
+3) Dr. C is interested in weather her new drug (Shrink-capsules) reduces height compared to the known average (see above)
+
+Draw the normal distribution implied by the height information above (1 point)
+
+
+
+
+Write out the null and alternative hypotheses that are implied by Dr. C’s interest (2 points)
+
+
+
+
+4) Dr. G is interested in weather Gavin’s memory will be impacted exercise in a way that is different from the known average (see above).
+
+Draw the normal distribution implied by the memory information above (1 point)
+
+
+
+Write out the null and alternative hypotheses that are implied by Dr. G’s interest (2 points)
+
+---
+
+Hypothetical Knowledge of the Reference Population (Same as Above)
+
+Sleep:
+Mean = 8 hours, Standard Deviation = 1 hour
+Intelligence:
+Mean = 100 points, Standard Deviation = 15 points
+Height:
+Mean = 68 inches, Standard Deviation = 4 inches
+Memory: 
+Mean = 20 items, Standard Deviation = 5 items
+
+---
+
+### Questions (Computational)
+
+*Assume .05 significance level unless otherwise noted; use information from above to answer the questions.*
+
+Assume that a researcher is interested in seeing if 20 patients are getting significantly more or less sleep than average. Do we need to consider both tails of the null? What is/are the cut-off point(s)? 1 point
+
+
+
+5a) what is/are the cut-off point(s) when we have a significance level of .10? 1 point
+
+
+
+5b) the researcher finds that the sample slept, on average, 9.8 hours. What should their decision be, assuming a .05 significance level and using the information above? Be sure to use the correct language, and interpret the finding using a complete sentence and report p < .05 or p > .05. 1 point
+
+
+
+
+Assume that a researcher is interested in seeing if an N = 100 sample of a newly discovered alien species is super intelligent. Is this a one or two-tailed question? What is/are the cut-off point(s)? 1 point
+
+
+
+
+6a) what is/are the cut-off point(s) when we have a significance level of .10? 1 point
+
+
+
+6b) the researcher finds that their alien sample averages 71. What should their decision be, assuming a .05 significance level and using the information above? Be sure to use the correct language, and interpret the finding using a complete sentence and report p < .05 or p > .05. 1 point
+
+
+
+Assume that a researcher is interested in shrinking the height of people to lower costs (like the movie “Downsizing”). They create a shrinking procedure and are interested in inches lost (for reference distribution, use information above). Is this a one or two-tailed question? What is/are the cut-off point(s)? 1 point
+
+
+
+
+7a) What is/are the cut-off point(s) when we have a significance level of .01? 1 point
+
+
+
+7b) the researcher shrinks 553 people, and their average height is 48 inches. What should their decision be, assuming a .05 significance level and using the information above? Be sure to use the correct language, and interpret the finding using a complete sentence and report p < .05 or p > .05. 1 point
+
+
+
+Assume that a researcher is interested in changing memory performance with a new supplement. They collect data from 1,500 volunteers. Is this a one or two-tailed question? What is/are the cut-off point(s)? 1 point
+
+
+
+
+8a) what is/are the cut-off point(s) when we have a significance level of .01? 1 point
+
+
+
+8b) the researcher finds that after taking the supplement, the sample recalled an average of 23 items. What should their decision be, assuming a .05 significance level? Be sure to use the correct language, and interpret the finding using a complete sentence and report p < .05 or p > .05. 1 point
+
+
+
+What is the formula for a z-test? 1 point

@@ -1,0 +1,116 @@
+# T-Tests: Part #1
+
+## Key Concepts
+
+- Normal Distribution
+- Variance, Standard Deviation
+- Probability Values
+- Cut-Off Points
+
+## Introduction...
+
+## Exercises
+
+### Questions (Conceptual)
+
+1) Dependent measures t-tests should be used when
+- At all possible
+- We have repeated measurements
+- We are interested in a dependent variable
+- Our independent variable has two levels
+
+2) A t-test is preferred over a z-test when we lack information about the
+- Sample size
+- Population mean
+- Population standard deviation
+- Sample variance
+
+3) The t-table provides different cutoff values of t for different 
+- Variances
+- Experimental designs
+- Degrees of freedom (N – 1)
+- Types of t-tests (independent vs. dependence)
+
+4) The t distribution looks like the z (normal) distribution, but only when sample size is sufficiently large
+- TRUE
+- FALSE
+
+5) A data set has 100 participants, each of whom contributed one response. The mean of the responses is 75.32. How many responses are free to vary?
+- 99
+- 100
+- 1
+- Not enough information to know
+
+### Questions (Computational)
+
+*Note: if direction is not specified, use direction implied by hypothesis*
+
+An athletic trainer believes a new training protocol increases golf swing speed without sacrificing accuracy. The historical population mean = μ₀ = 98 miles per hour (MPH), but the population standard deviation is unknown! The trainer collected data from N = 12 participants, testing their swing speed after the putting them through the new training protocol. Use α = .05.
+
+|Data|
+|----|
+|103|
+|102|
+|97 |
+|102|
+|99 |
+|105|
+|95 |	
+|98 |
+|99 |
+|105|
+|101|
+|103|
+
+
+
+Use the data above to compute the following (2 points):
+
+Sum = 		SS = 
+Mean = 		Variance = 
+N = 		Standard Deviation = 
+DF = 
+
+
+Write H₀/H₁ and determine cutoff (1 point)
+
+
+The same athletic trainer wants to conduct another study. Instead of trusting the historical population mean, they want to see if the protocol actually increases swing speed within-subjects. They recruit N = 12 participants, testing their swing speed before and after putting them through the new training protocol. Use α = .05.
+
+
+
+	
+	
+ 	
+	
+	
+
+
+Complete the above table and obtain all values; show work (2 points)
+Write H₀/H₁ and determine cutoff (1 point)
+
+
+Compute t (show work, decide, interpret) (2 points)
+
+
+
+
+
+You’re hired by the Minnesota Vikings to conduct an analysis to determine if the Vikings score a different number of points per game (M = 28, SD = 7, based on N = 16 games) than the NFL average (μ₀ = 24). Use α = .01.
+
+Write H₀/H₁, determine cutoff, compute t (show work, including SE computation), decide, interpret (5 points)
+
+
+
+
+
+
+
+
+
+
+A counseling center uses a standardized depression score where population mean is μ₀ = 22 (lower = fewer symptoms). After a new group-therapy program, the researchers at the center expect to see a decrease in scores. They collect a sample of N = 36 clients who complete the program, finding a mean of 19.2 and standard deviation of 3.5. Use α = .10.
+
+Write H₀/H₁, determine cutoff, compute t (show work, including SE computation), decide, interpret (5 points)
+
+

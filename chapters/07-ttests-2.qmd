@@ -1,0 +1,8 @@
+# T-Tests: Part #2
+
+## Key Concepts
+
+- Normal Distribution
+- Variance, Standard Deviation
+- Probability Values
+- Cut-Off Points

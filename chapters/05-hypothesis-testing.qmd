@@ -1,0 +1,114 @@
+# Hypothesis Testing: Core Concepts and Z Tests
+
+## Key Concepts
+
+- Z Scores vs. Z Tests
+- Probability Distribution
+- Alpha
+- Type 1 and Type 2 Errors
+- Power
+
+## Introduction...
+
+Begin...
+
+## Exercises
+
+### Questions (Conceptual)
+
+1) In hypothesis testing, the null hypothesis (H₀) usually states that:
+- There is no effect or no difference
+- There is a difference in the expected direction
+- The researcher’s prediction is true
+- The effect size is large
+
+2) The alternative hypothesis (H₁) in a one-tailed test states that:
+- The sample mean differs from the population mean in either direction
+- The sample mean is greater (or less) than the population mean, depending on prediction
+- The population mean equals the sample mean
+- Type I error is impossible
+
+3) A Type I error occurs when:
+- You fail to reject H₀ when it’s false
+- You reject H₀ when it’s true
+- You reject H₁ when it’s true
+- The p-value equals the effect size
+
+4) A Type II error occurs when:
+- You reject H₀ when it’s true
+- You fail to reject H₀ when it’s false
+- α (alpha) is greater than β (beta)
+- You set α = .05 instead of .01
+
+5) Statistical power is defined as:
+- The probability of rejecting H₀ when H₀ is true
+- The probability of rejecting H₀ when H₀ is false
+- The probability of making a Type I error
+- The probability of failing to reject H₀
+
+6) Which of the following increases statistical power?
+- Smaller sample size
+- Lower α (e.g., .01 vs .05)
+- Larger sample size
+- More variability in the data
+
+7) Which α level would make it harder to reject H₀? Recall that α is alpha
+- α = .05
+- α = .10
+- α = .01
+- α = .50
+
+8) A researcher predicts that caffeine improves memory recall. Which is the correct null hypothesis?
+- Caffeine improves recall
+- Caffeine impairs recall
+- Caffeine has no effect on recall
+- Caffeine improves recall more than nicotine
+
+9) If a study has low power, what is most likely to happen?
+- More Type I errors
+- More Type II errors
+- More correct rejections of H₀
+- Effect size increases
+
+10) The critical z value for a two-tailed test at α = .05 is:
+- ±1.28
+- ±1.645
+- ±1.96
+- ±2.58
+
+### Questions (Computational)
+
+*Note: if direction is not specified, use direction implied by hypothesis*
+
+A cognitive psychologist believes a new mnemonic strategy increases immediate recall above the population average. Historical population mean recall = μ₀ = 15 items, population standard deviation σ = 4. She tests n = 36 participants using the mnemonic and obtains a sample mean M = 16.5. Use α = .05.
+
+Write H₀/H₁, determine cutoff, compute z (show work, including SE computation), decide, interpret.
+
+
+
+An experiment measures reaction time. The established population mean is μ₀ = 350 ms, σ = 60 ms. A new interface was tested on n = 49 users; sample mean is M = 340 ms. Use α = .05, two-tailed.
+
+Write H₀/H₁, determine cutoff, compute z (show work, including SE computation), decide, interpret.
+
+
+
+
+A hospital reviews case files of users of a drug and suspects they die earlier than the national mean. National mean lifespan μ₀ = 78 years, σ = 6 years. From n = 64 case files, average age at death is M = 75.8. Use α = .01.
+
+Write H₀/H₁, determine cutoff, compute z (show work, including SE computation), decide, interpret.
+
+
+
+
+A counseling center uses a standardized depression score where population mean is μ₀ = 22 (lower = fewer symptoms), σ = 5. After a new group-therapy program, a sample of n = 25 clients has mean M = 20.2. Use α = .10, two-tailed.
+
+Write H₀/H₁, determine cutoff, compute z (show work, including SE computation), decide, interpret.
+
+
+
+
+A professor worries that a new, harder test lowered student performance. Population mean exam score historically is μ₀ = 75, σ = 10. A sample of n = 100 students who took the new test had mean M = 72. Use α = .05.
+
+Write H₀/H₁, determine cutoff, compute z (show work, including SE computation), decide, interpret.
+
+

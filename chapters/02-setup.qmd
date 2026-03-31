@@ -1,3 +1,22 @@
 # Setup
 
-{{< lipsum >}}
+As part of this course, you have the ability to complete assignments (or parts of assignments) using R or Python. Getting set up with these tools is often a hurdle when first starting out. Python, in particular, could be a chore as there were many different ways to install the language itself and manage packages. 
+
+## Getting Started with R
+
+There are a few concepts to keep in mind when getting started with R:
+
+- R the language
+- R Studio the interactive developer enviornment (IDE)
+
+These are sometimes conflated likely because of how intertwined they are. R itself is a statistical programming language, though it can do more than stats. R Studio is software that makes interacting with R (the language) more enjoyable. At present, Positron is another IDE that specializes in working with R (and Python). Specifically, it is built on top of VSCode (another IDE) with configurations baked in that are helpful for data science folks.
+
+If you have no programming experience and want as simple of a setup as possible, I'd recommend R Studio.
+
+### Installing the Language
+
+Go to [link](link)
+
+### Installing R Studio
+
+Go to [link](link)

@@ -10,11 +10,11 @@ book:
     - chapters/intro.qmd
     - chapters/02-setup.qmd
     - chapters/03-probability.qmd
-    - chapters/0x-ztests.qmd
-    - chapters/0x-ttests.qmd
-    - chapters/0x-anova.qmd
-    - chapters/0x-correlation.qmd
-    - chapters/0x-regression.qmd
+    - chapters/04-ztests.qmd
+    - chapters/05-hypothesis-testing.qmd
+    - chapters/06-ttests-1.qmd
+    - chapters/07-ttests-2.qmd
+    - chapters/08-anova.qmd
     - chapters/0x-advanced-topics.qmd
     - chapters/summary.qmd
     - references.qmd

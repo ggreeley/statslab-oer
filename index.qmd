@@ -2,9 +2,9 @@
 
 > "I didn't become a psychology major to learn math!"
 
-I have heard some variant of this...
+I have heard some variant of this from many students. 
 
-{{< lipsum 2 >}}
+I hear you! And I have some good news. You probably already know most of the math you need to succeed in this course. So don't give up.
 
 # A Message for the Mathematically Weary
 
