@@ -14,101 +14,222 @@ Begin...
 
 ## Exercises
 
-### Questions (Conceptual)
+### Conceptual Questions
 
-1) In hypothesis testing, the null hypothesis (H₀) usually states that:
-- There is no effect or no difference
-- There is a difference in the expected direction
-- The researcher’s prediction is true
-- The effect size is large
+1. In hypothesis testing, the null hypothesis (H₀) usually states that:
 
-2) The alternative hypothesis (H₁) in a one-tailed test states that:
-- The sample mean differs from the population mean in either direction
-- The sample mean is greater (or less) than the population mean, depending on prediction
-- The population mean equals the sample mean
-- Type I error is impossible
+   A. There is no effect or no difference
+   B. There is a difference in the expected direction
+   C. The researcher's prediction is true
+   D. The effect size is large
 
-3) A Type I error occurs when:
-- You fail to reject H₀ when it’s false
-- You reject H₀ when it’s true
-- You reject H₁ when it’s true
-- The p-value equals the effect size
+2. The alternative hypothesis (H₁) in a one-tailed test states that:
 
-4) A Type II error occurs when:
-- You reject H₀ when it’s true
-- You fail to reject H₀ when it’s false
-- α (alpha) is greater than β (beta)
-- You set α = .05 instead of .01
+   A. The sample mean differs from the population mean in either direction
+   B. The sample mean is greater (or less) than the population mean, depending on prediction
+   C. The population mean equals the sample mean
+   D. Type I error is impossible
 
-5) Statistical power is defined as:
-- The probability of rejecting H₀ when H₀ is true
-- The probability of rejecting H₀ when H₀ is false
-- The probability of making a Type I error
-- The probability of failing to reject H₀
+3. A Type I error occurs when:
 
-6) Which of the following increases statistical power?
-- Smaller sample size
-- Lower α (e.g., .01 vs .05)
-- Larger sample size
-- More variability in the data
+   A. You fail to reject H₀ when it is false
+   B. You reject H₀ when it is true
+   C. You reject H₁ when it is true
+   D. The p-value equals the effect size
 
-7) Which α level would make it harder to reject H₀? Recall that α is alpha
-- α = .05
-- α = .10
-- α = .01
-- α = .50
+4. A Type II error occurs when:
 
-8) A researcher predicts that caffeine improves memory recall. Which is the correct null hypothesis?
-- Caffeine improves recall
-- Caffeine impairs recall
-- Caffeine has no effect on recall
-- Caffeine improves recall more than nicotine
+   A. You reject H₀ when it is true
+   B. You fail to reject H₀ when it is false
+   C. α is greater than β
+   D. You set α = .05 instead of .01
 
-9) If a study has low power, what is most likely to happen?
-- More Type I errors
-- More Type II errors
-- More correct rejections of H₀
-- Effect size increases
+5. Statistical power is defined as:
 
-10) The critical z value for a two-tailed test at α = .05 is:
-- ±1.28
-- ±1.645
-- ±1.96
-- ±2.58
+   A. The probability of rejecting H₀ when H₀ is true
+   B. The probability of rejecting H₀ when H₀ is false
+   C. The probability of making a Type I error
+   D. The probability of failing to reject H₀
 
-### Questions (Computational)
+6. Which of the following increases statistical power?
 
-*Note: if direction is not specified, use direction implied by hypothesis*
+   A. Smaller sample size
+   B. Lower α (e.g., .01 vs. .05)
+   C. Larger sample size
+   D. More variability in the data
 
-A cognitive psychologist believes a new mnemonic strategy increases immediate recall above the population average. Historical population mean recall = μ₀ = 15 items, population standard deviation σ = 4. She tests n = 36 participants using the mnemonic and obtains a sample mean M = 16.5. Use α = .05.
+7. Which α level would make it harder to reject H₀?
 
-Write H₀/H₁, determine cutoff, compute z (show work, including SE computation), decide, interpret.
+   A. α = .05
+   B. α = .10
+   C. α = .01
+   D. α = .50
 
+8. A researcher predicts that caffeine improves memory recall. Which is the correct null hypothesis?
 
+   A. Caffeine improves recall
+   B. Caffeine impairs recall
+   C. Caffeine has no effect on recall
+   D. Caffeine improves recall more than nicotine
 
-An experiment measures reaction time. The established population mean is μ₀ = 350 ms, σ = 60 ms. A new interface was tested on n = 49 users; sample mean is M = 340 ms. Use α = .05, two-tailed.
+9. If a study has low power, what is most likely to happen?
 
-Write H₀/H₁, determine cutoff, compute z (show work, including SE computation), decide, interpret.
+   A. More Type I errors
+   B. More Type II errors
+   C. More correct rejections of H₀
+   D. Effect size increases
 
+10. The critical z value for a two-tailed test at α = .05 is:
 
+    A. ±1.28
+    B. ±1.645
+    C. ±1.96
+    D. ±2.58
 
+---
 
-A hospital reviews case files of users of a drug and suspects they die earlier than the national mean. National mean lifespan μ₀ = 78 years, σ = 6 years. From n = 64 case files, average age at death is M = 75.8. Use α = .01.
+### Computational Questions
 
-Write H₀/H₁, determine cutoff, compute z (show work, including SE computation), decide, interpret.
+*Note: if direction is not specified, use direction implied by hypothesis.*
 
+For each problem: write H₀ and H₁, identify the cutoff value(s), compute z (showing the SE calculation and all steps), state your decision, and interpret the result in plain language. Report p < .05 or p > .05 as appropriate.
 
+---
 
+**Problem 1**
 
-A counseling center uses a standardized depression score where population mean is μ₀ = 22 (lower = fewer symptoms), σ = 5. After a new group-therapy program, a sample of n = 25 clients has mean M = 20.2. Use α = .10, two-tailed.
+A cognitive psychologist believes a new mnemonic strategy increases immediate recall above the population average. Use α = .05.
 
-Write H₀/H₁, determine cutoff, compute z (show work, including SE computation), decide, interpret.
+| Parameter | Value |
+|:---|:---|
+| Population mean (μ₀) | 15 items |
+| Population SD (σ) | 4 |
+| Sample size (n) | 36 |
+| Sample mean (M) | 16.5 items |
 
+```{r}
+#| eval: false
+mu0   <- 15     # population mean (items)
+sigma <- 4      # population SD
+n     <- 36     # sample size
+M     <- 16.5   # sample mean (items)
+alpha <- 0.05
+```
 
+&nbsp;
 
+&nbsp;
 
-A professor worries that a new, harder test lowered student performance. Population mean exam score historically is μ₀ = 75, σ = 10. A sample of n = 100 students who took the new test had mean M = 72. Use α = .05.
+&nbsp;
 
-Write H₀/H₁, determine cutoff, compute z (show work, including SE computation), decide, interpret.
+---
 
+**Problem 2**
 
+An experiment measures reaction time. Use α = .05, two-tailed.
+
+| Parameter | Value |
+|:---|:---|
+| Population mean (μ₀) | 350 ms |
+| Population SD (σ) | 60 ms |
+| Sample size (n) | 49 |
+| Sample mean (M) | 340 ms |
+
+```{r}
+#| eval: false
+mu0   <- 350    # population mean (ms)
+sigma <- 60     # population SD
+n     <- 49     # sample size
+M     <- 340    # sample mean (ms)
+alpha <- 0.05
+```
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+---
+
+**Problem 3**
+
+A hospital reviews case files and suspects that users of a particular drug die earlier than the national average. Use α = .01.
+
+| Parameter | Value |
+|:---|:---|
+| National mean lifespan (μ₀) | 78 years |
+| Population SD (σ) | 6 years |
+| Sample size (n) | 64 |
+| Sample mean (M) | 75.8 years |
+
+```{r}
+#| eval: false
+mu0   <- 78     # national mean lifespan (years)
+sigma <- 6      # population SD
+n     <- 64     # sample size
+M     <- 75.8   # sample mean (years)
+alpha <- 0.01
+```
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+---
+
+**Problem 4**
+
+A counseling center uses a standardized depression score where lower scores indicate fewer symptoms. After a new group-therapy program, they assess a sample of clients. Use α = .10, two-tailed.
+
+| Parameter | Value |
+|:---|:---|
+| Population mean (μ₀) | 22 |
+| Population SD (σ) | 5 |
+| Sample size (n) | 25 |
+| Sample mean (M) | 20.2 |
+
+```{r}
+#| eval: false
+mu0   <- 22     # population mean (lower = fewer symptoms)
+sigma <- 5      # population SD
+n     <- 25     # sample size
+M     <- 20.2   # sample mean
+alpha <- 0.10
+```
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+---
+
+**Problem 5**
+
+A professor worries that a new, harder exam lowered student performance. Use α = .05.
+
+| Parameter | Value |
+|:---|:---|
+| Historical population mean (μ₀) | 75 |
+| Population SD (σ) | 10 |
+| Sample size (n) | 100 |
+| Sample mean (M) | 72 |
+
+```{r}
+#| eval: false
+mu0   <- 75     # historical population mean
+sigma <- 10     # population SD
+n     <- 100    # sample size
+M     <- 72     # sample mean
+alpha <- 0.05
+```
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;

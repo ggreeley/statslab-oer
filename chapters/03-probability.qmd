@@ -11,69 +11,209 @@
 
 ## Exercises
 
-### Example Study
+### Study Context
 
-A researcher measured how high basketball players can jump (i.e., their vertical). This was measured in inches, to the nearest inch. Before their test, some players were randomly assigned to drink 12 ounces of water while different players were randomly assigned to drink 12 ounces of “launch sauce,” a new beverage aimed at enhancing leaping ability for those already undergoing extensive training.
+A researcher measured how high basketball players can jump (vertical leap), recorded in inches. Before testing, players were randomly assigned to drink either 12 oz of water or 12 oz of "Launch Sauce" (a new beverage aimed at enhancing athletic performance).
 
-The data looked like this:
+**Water Group** (n = 10)
 
-Water Group: 24, 25, 25, 30, 33, 22, 36, 40, 27, 32
-Launch Sauce Group: 20, 33, 38, 29, 34, 28, 26, 37, 41, 30, 25, 41
+| Participant | Vertical (in.) |
+|:-----------:|:--------------:|
+|  1 | 24 |
+|  2 | 25 |
+|  3 | 25 |
+|  4 | 30 |
+|  5 | 33 |
+|  6 | 22 |
+|  7 | 36 |
+|  8 | 40 |
+|  9 | 27 |
+| 10 | 32 |
 
-### Questions
+**Launch Sauce Group** (n = 12)
 
-What is the formula for the mean? 1 point
+| Participant | Vertical (in.) |
+|:-----------:|:--------------:|
+|  1 | 20 |
+|  2 | 33 |
+|  3 | 38 |
+|  4 | 29 |
+|  5 | 34 |
+|  6 | 28 |
+|  7 | 26 |
+|  8 | 37 |
+|  9 | 41 |
+| 10 | 30 |
+| 11 | 25 |
+| 12 | 41 |
 
+```{r}
+#| eval: false
+water_group        <- c(24, 25, 25, 30, 33, 22, 36, 40, 27, 32)
+launch_sauce_group <- c(20, 33, 38, 29, 34, 28, 26, 37, 41, 30, 25, 41)
+```
 
-What is the formula for variance of a sample? 1 point
+---
 
+### Conceptual Questions
 
-What is the formula for standard deviation of a sample? 1 point
+1. The formula for the mean of a sample is:
 
+   A. $\bar{X} = \dfrac{\sum X^2}{N}$
+   B. $\bar{X} = \dfrac{\sum X}{N}$
+   C. $\bar{X} = \dfrac{\sum X}{N-1}$
+   D. $\bar{X} = \dfrac{\sum (X - \bar{X})}{N}$
 
-What is the formula for computing a z-score from a raw score? 1 point
+2. The formula for the variance of a sample is:
 
+   A. $s^2 = \dfrac{\sum (X - \bar{X})}{N-1}$
+   B. $s^2 = \dfrac{\sum (X - \bar{X})^2}{N}$
+   C. $s^2 = \dfrac{\sum (X - \bar{X})^2}{N-1}$
+   D. $s^2 = \sqrt{\dfrac{\sum (X - \bar{X})^2}{N-1}}$
 
-What is the formula for computing a raw score from a z-score? 1 point
+3. The formula for the standard deviation of a sample is:
 
+   A. $s = \dfrac{\sum (X - \bar{X})^2}{N-1}$
+   B. $s = \sqrt{\dfrac{\sum (X - \bar{X})^2}{N}}$
+   C. $s = \sqrt{\dfrac{\sum (X - \bar{X})^2}{N-1}}$
+   D. $s = \dfrac{\sum (X - \bar{X})^2}{N}$
 
-What is the variance for the Launch Sauce Group (show work)? 1 point
+4. The formula for computing a z-score from a raw score is:
 
+   A. $z = \dfrac{\bar{X} - X}{s}$
+   B. $z = \dfrac{X - \bar{X}}{s^2}$
+   C. $z = \dfrac{X - \bar{X}}{s}$
+   D. $z = X \cdot s + \bar{X}$
 
-What is the standard deviation for the Launch Sauce Group (show work)? 1 point
+5. The formula for computing a raw score from a z-score is:
 
+   A. $X = \dfrac{z}{s} + \bar{X}$
+   B. $X = z \cdot s - \bar{X}$
+   C. $X = z \cdot s + \bar{X}$
+   D. $X = \dfrac{z - \bar{X}}{s}$
 
-Describe what a z-score is in one sentence (i.e., what are the units, what does it represent). 1 point
+6. Which of the following best describes what a z-score represents?
 
+   A. The raw score minus the median, expressed in units of variance
+   B. The number of standard deviations a score is above or below the mean
+   C. The probability that a score occurs in a normal distribution
+   D. The percentile rank of a score within a sample
 
-If a value is equivalent to the mean, its associated z-score will always be what value? 0.5 points
+7. If a value is exactly equal to the mean, its corresponding z-score will always be:
 
+   A. 1
+   B. Undefined
+   C. 0
+   D. Equal to the standard deviation
 
-If a value is one standard deviation above the mean, its associated z-score will always be what value? 0.5 points
+8. If a value is exactly one standard deviation above the mean, its z-score will always be:
 
+   A. 0
+   B. −1
+   C. 1
+   D. It depends on the sample size
 
-TRUE or FALSE: if value “A” is 3.5 standard deviations above the mean, it is fair to say that if we select a new data point at random, it is guaranteed to be less than value “A” because z-scores max out at +/-3.5.  0.5 points
+9. TRUE or FALSE: If value "A" is 3.5 standard deviations above the mean, it is guaranteed that any randomly selected data point will be less than "A," because z-scores max out at ±3.5.
 
+   A. True
+   B. False
 
-TRUE or FALSE: computing z scores allows us to “normalize” data with respect to the mean, which makes it possible to compare performance across different outcomes. 0.5 points
+10. TRUE or FALSE: Computing z-scores allows us to "normalize" data with respect to the mean, making it possible to compare performance across different outcomes (e.g., comparing a height score to a memory score).
 
+    A. True
+    B. False
 
-What is the z-score for the response of “30” in the Water Group (show work)? 1 point
+---
 
+### Computational Questions
 
-What is the z-score for the response of “37” in the Water Group (show work)? 1 point
+*Use the study data above. Show all work.*
 
+---
 
-A z-score of 1.25 in the Launch Sauce Group would correspond to what value (round to nearest inch)? 1 point
+**Problem 1**
 
+Compute the variance and standard deviation for the **Launch Sauce Group**.
 
-What is the probability that a random score will be less than z = 0.0? 1 point
+| Statistic | Value |
+|:---|:---|
+| Sum = | |
+| N = | |
+| Mean = | |
+| SS = | |
+| Variance = | |
+| Standard Deviation = | |
 
+&nbsp;
 
-What is the probability that a random score will come from between z = -1 and z = 1? 1 point
+&nbsp;
 
+---
 
-What is the probability that a score will be less than 21 in the Launch Sauce Group? 1 point
+**Problem 2**
 
+Compute the z-score for a vertical of **30 inches** in the **Water Group**. Show the mean, SD, and all computational steps.
 
-Draw the approximately normal distribution implied by the Launch Sauce Group. On the x-axis, include two scales (raw scores and z-scores), with vertical lines at the mean and +/-1 and +/-2 standard deviations. 1 point
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+---
+
+**Problem 3**
+
+Compute the z-score for a vertical of **37 inches** in the **Launch Sauce Group**. Show all steps.
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+---
+
+**Problem 4**
+
+A z-score of **1.25** in the **Launch Sauce Group** corresponds to what raw score (round to the nearest inch)? Show all steps.
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+---
+
+**Problem 5**
+
+Answer the following probability questions. Assume a normal distribution.
+
+a. What is the probability that a randomly selected score will be **less than z = 0.0**?
+
+&nbsp;
+
+b. What is the probability that a randomly selected score will fall **between z = −1 and z = +1**?
+
+&nbsp;
+
+c. What is the probability that a score in the **Launch Sauce Group** will be **less than 21 inches**? Show all steps.
+
+&nbsp;
+
+&nbsp;
+
+---
+
+**Problem 6**
+
+Draw the approximately normal distribution implied by the **Launch Sauce Group**. On the x-axis, include two scales (raw scores and z-scores), with vertical lines at the mean and at ±1 and ±2 standard deviations. Label all key values.
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;

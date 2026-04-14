@@ -1,4 +1,4 @@
-# The Normal Distribution and Uzing Z Scores
+# The Normal Distribution and Using Z Scores
 
 ## Key Concepts
 
@@ -11,131 +11,273 @@
 
 ## Exercises
 
-### Example Data
+### Conceptual Questions
 
-Sleep:
-Mean = 8 hours, Standard Deviation = 1 hour
+1. The normal distribution is symmetric about its:
 
-Intelligence:
-Mean = 100 points, Standard Deviation = 15 points
+   A. Mode only
+   B. Median only
+   C. Mean, median, and mode (all three are equal)
+   D. Variance
 
-Height:
-Mean = 68 inches, Standard Deviation = 4 inches
+2. Approximately what percentage of scores in a normal distribution fall within ±1 standard deviation of the mean?
 
-Memory: 
-Mean = 20 items, Standard Deviation = 5 items
+   A. 50%
+   B. 68%
+   C. 95%
+   D. 99.7%
 
-### Questions (Conceptual)
+3. Approximately what percentage of scores in a normal distribution fall within ±2 standard deviations of the mean?
 
-1) Dr. A is interested in weather his patient (Patient 47) is having sleep disturbances that are different from the known average (see above).
+   A. 50%
+   B. 68%
+   C. 95%
+   D. 99.7%
 
-Draw the normal distribution implied by the sleep information above (1 point)
+4. In a one-tailed test where the researcher predicts scores will be *higher* than average, the rejection region is located in:
 
+   A. The lower tail of the distribution
+   B. Both tails equally
+   C. The upper tail of the distribution
+   D. The center of the distribution
 
+5. The null hypothesis for a z-test typically states:
 
-Write out the null and alternative hypotheses that are implied by Dr. A’s interest (2 points)
+   A. The sample mean is significantly different from the population mean
+   B. There is no difference between the sample mean and the population mean
+   C. The sample mean is greater than the population mean
+   D. The population standard deviation equals zero
 
+6. In a two-tailed test at α = .05, the rejection regions occupy:
 
-2) Dr. B is interested in weather his new drug (Intelli-Juice) improves intelligence scores compared to the known average (see above).
+   A. The upper 5% of the distribution only
+   B. The lower 5% of the distribution only
+   C. 2.5% in each tail (5% total)
+   D. The central 5% of the distribution
 
-Draw and label the normal distribution implied by the intelligence information above (1 point)
+7. The standard error of the mean (SE) is computed as:
 
+   A. $SE = \sigma \cdot \sqrt{n}$
+   B. $SE = \dfrac{\sigma}{n}$
+   C. $SE = \dfrac{\sigma}{\sqrt{n}}$
+   D. $SE = \dfrac{\sigma^2}{n}$
 
+8. When α = .05, the critical z values for a two-tailed test are:
 
+   A. ±1.28
+   B. ±1.645
+   C. ±1.96
+   D. ±2.58
 
-Write out the null and alternative hypotheses that are implied by Dr. B’s interest (2 points)
+9. TRUE or FALSE: If the obtained z statistic falls beyond the critical value (into the rejection region), we reject the null hypothesis.
 
+   A. True
+   B. False
 
+10. TRUE or FALSE: A two-tailed test is appropriate when the researcher has a specific directional prediction (e.g., predicts scores will increase).
 
-3) Dr. C is interested in weather her new drug (Shrink-capsules) reduces height compared to the known average (see above)
-
-Draw the normal distribution implied by the height information above (1 point)
-
-
-
-
-Write out the null and alternative hypotheses that are implied by Dr. C’s interest (2 points)
-
-
-
-
-4) Dr. G is interested in weather Gavin’s memory will be impacted exercise in a way that is different from the known average (see above).
-
-Draw the normal distribution implied by the memory information above (1 point)
-
-
-
-Write out the null and alternative hypotheses that are implied by Dr. G’s interest (2 points)
+    A. True
+    B. False
 
 ---
 
-Hypothetical Knowledge of the Reference Population (Same as Above)
+### Computational Questions
 
-Sleep:
-Mean = 8 hours, Standard Deviation = 1 hour
-Intelligence:
-Mean = 100 points, Standard Deviation = 15 points
-Height:
-Mean = 68 inches, Standard Deviation = 4 inches
-Memory: 
-Mean = 20 items, Standard Deviation = 5 items
+**Reference Population Parameters**
+
+| Variable | Mean (μ) | SD (σ) |
+|:---------|:--------:|:------:|
+| Sleep | 8 hours | 1 hour |
+| Intelligence | 100 points | 15 points |
+| Height | 68 inches | 4 inches |
+| Memory | 20 items | 5 items |
+
+```{r}
+#| eval: false
+populations <- list(
+  sleep        = list(mean = 8,   sd = 1),
+  intelligence = list(mean = 100, sd = 15),
+  height       = list(mean = 68,  sd = 4),
+  memory       = list(mean = 20,  sd = 5)
+)
+```
 
 ---
 
-### Questions (Computational)
+#### Part A: Drawing and Hypothesis Exercises
 
-*Assume .05 significance level unless otherwise noted; use information from above to answer the questions.*
+*For each scenario: (a) draw and label the normal distribution implied by the relevant population parameters, and (b) write the null and alternative hypotheses in both symbolic and plain-language form.*
 
-Assume that a researcher is interested in seeing if 20 patients are getting significantly more or less sleep than average. Do we need to consider both tails of the null? What is/are the cut-off point(s)? 1 point
+---
 
+**Exercise 1** — Sleep
 
+Dr. A is interested in whether Patient 47 is sleeping a *different* amount than the population average (in either direction).
 
-5a) what is/are the cut-off point(s) when we have a significance level of .10? 1 point
+a. Draw and label the distribution. *(1 point)*
 
+&nbsp;
 
+&nbsp;
 
-5b) the researcher finds that the sample slept, on average, 9.8 hours. What should their decision be, assuming a .05 significance level and using the information above? Be sure to use the correct language, and interpret the finding using a complete sentence and report p < .05 or p > .05. 1 point
+&nbsp;
 
+b. Write H₀ and H₁. *(2 points)*
 
+&nbsp;
 
+&nbsp;
 
-Assume that a researcher is interested in seeing if an N = 100 sample of a newly discovered alien species is super intelligent. Is this a one or two-tailed question? What is/are the cut-off point(s)? 1 point
+---
 
+**Exercise 2** — Intelligence
 
+Dr. B is interested in whether a new drug (Intelli-Juice) *improves* intelligence scores compared to the known average.
 
+a. Draw and label the distribution. *(1 point)*
 
-6a) what is/are the cut-off point(s) when we have a significance level of .10? 1 point
+&nbsp;
 
+&nbsp;
 
+&nbsp;
 
-6b) the researcher finds that their alien sample averages 71. What should their decision be, assuming a .05 significance level and using the information above? Be sure to use the correct language, and interpret the finding using a complete sentence and report p < .05 or p > .05. 1 point
+b. Write H₀ and H₁. *(2 points)*
 
+&nbsp;
 
+&nbsp;
 
-Assume that a researcher is interested in shrinking the height of people to lower costs (like the movie “Downsizing”). They create a shrinking procedure and are interested in inches lost (for reference distribution, use information above). Is this a one or two-tailed question? What is/are the cut-off point(s)? 1 point
+---
 
+**Exercise 3** — Height
 
+Dr. C is interested in whether a new drug (Shrink-Capsules) *reduces* height compared to the known average.
 
+a. Draw and label the distribution. *(1 point)*
 
-7a) What is/are the cut-off point(s) when we have a significance level of .01? 1 point
+&nbsp;
 
+&nbsp;
 
+&nbsp;
 
-7b) the researcher shrinks 553 people, and their average height is 48 inches. What should their decision be, assuming a .05 significance level and using the information above? Be sure to use the correct language, and interpret the finding using a complete sentence and report p < .05 or p > .05. 1 point
+b. Write H₀ and H₁. *(2 points)*
 
+&nbsp;
 
+&nbsp;
 
-Assume that a researcher is interested in changing memory performance with a new supplement. They collect data from 1,500 volunteers. Is this a one or two-tailed question? What is/are the cut-off point(s)? 1 point
+---
 
+**Exercise 4** — Memory
 
+Dr. G is interested in whether exercise impacts Gavin's memory in a way that is *different from* the known average (in either direction).
 
+a. Draw and label the distribution. *(1 point)*
 
-8a) what is/are the cut-off point(s) when we have a significance level of .01? 1 point
+&nbsp;
 
+&nbsp;
 
+&nbsp;
 
-8b) the researcher finds that after taking the supplement, the sample recalled an average of 23 items. What should their decision be, assuming a .05 significance level? Be sure to use the correct language, and interpret the finding using a complete sentence and report p < .05 or p > .05. 1 point
+b. Write H₀ and H₁. *(2 points)*
 
+&nbsp;
 
+&nbsp;
 
-What is the formula for a z-test? 1 point
+---
+
+#### Part B: z-Test Decision Problems
+
+*Assume α = .05 unless otherwise noted. Use the population parameters from the table above.*
+
+---
+
+**Problem 5** — Sleep (two-tailed)
+
+A researcher is interested in whether N = 20 patients are getting significantly more or less sleep than average.
+
+a. Is this a one- or two-tailed test? What is/are the cutoff point(s) at α = .05? *(1 point)*
+
+&nbsp;
+
+b. What is/are the cutoff point(s) at α = .10? *(1 point)*
+
+&nbsp;
+
+c. The sample slept an average of 9.8 hours. State your decision at α = .05 and interpret in a complete sentence; report p < .05 or p > .05. *(1 point)*
+
+&nbsp;
+
+&nbsp;
+
+---
+
+**Problem 6** — Intelligence (one-tailed)
+
+A researcher tests whether N = 100 members of a newly discovered alien species are *super intelligent* (i.e., score higher than average).
+
+a. Is this a one- or two-tailed test? What is/are the cutoff point(s) at α = .05? *(1 point)*
+
+&nbsp;
+
+b. What is/are the cutoff point(s) at α = .10? *(1 point)*
+
+&nbsp;
+
+c. The alien sample averages 71 intelligence points. State your decision at α = .05 and interpret; report p < .05 or p > .05. *(1 point)*
+
+&nbsp;
+
+&nbsp;
+
+---
+
+**Problem 7** — Height (one-tailed)
+
+A researcher develops a "shrinking procedure" and measures resulting height for N = 553 participants.
+
+a. Is this a one- or two-tailed test? What is/are the cutoff point(s) at α = .05? *(1 point)*
+
+&nbsp;
+
+b. What is/are the cutoff point(s) at α = .01? *(1 point)*
+
+&nbsp;
+
+c. The shrunken sample has an average height of 48 inches. State your decision at α = .05 and interpret; report p < .05 or p > .05. *(1 point)*
+
+&nbsp;
+
+&nbsp;
+
+---
+
+**Problem 8** — Memory (two-tailed)
+
+A researcher examines whether a new supplement changes memory performance in N = 1,500 volunteers.
+
+a. Is this a one- or two-tailed test? What is/are the cutoff point(s) at α = .05? *(1 point)*
+
+&nbsp;
+
+b. What is/are the cutoff point(s) at α = .01? *(1 point)*
+
+&nbsp;
+
+c. After taking the supplement, the sample recalled an average of 23 items. State your decision at α = .05 and interpret; report p < .05 or p > .05. *(1 point)*
+
+&nbsp;
+
+&nbsp;
+
+---
+
+**Bonus**
+
+What is the formula for a z-test (as opposed to a z-score for a single observation)?
+
+&nbsp;

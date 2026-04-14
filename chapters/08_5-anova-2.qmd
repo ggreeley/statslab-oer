@@ -1,106 +1,226 @@
-# One-Way ANOVA
+# Factorial ANOVA
 
 ## Key Concepts
 
-- Normal Distribution
-- Variance, Standard Deviation
-- Probability Values
-- Cut-Off Points
+- Main Effects
+- Interactions
+- Factorial Design
+- Between-Group Variance
 
 ## Exercises
 
-### Questions (Conceptual)
+### Conceptual Questions
 
-The main purpose of a factorial ANOVA is to:   	a. Test whether the variance of one sample equals another sample   	b. Test whether three or more group means differ significantly (using variance information)   	c. Test the main effect of two or more categorical variables, in addition to their interactions (using variance information)   	d. Measure the correlation between two variables
+1. The main purpose of a factorial ANOVA is to:
 
-A factorial ANOVA requires computing ____, just like a one-way ANOVA  	a. SS-between   	b. SS-within   	c. MS-between   	d. all of the above
+   A. Test whether the variance of one sample equals another sample
+   B. Test whether three or more group means differ significantly, using variance information
+   C. Test the main effects of two or more categorical variables and their interaction, using variance information
+   D. Measure the correlation between two variables
 
-You are comparing how caffeine consumption (placebo vs. 200mg) impacts athletic performance (weight lifted), while also accounting for sleep quality (8-hours vs. 4-hours). Different participants are included in each condition/combination of conditions. This type of design calls for:   	a. Repeated one-way ANOVAs   	b. Repeated factorial ANOVAs   	c. Pairwise t-tests   	d. Factorial ANOVA
+2. A factorial ANOVA requires computing ____, just like a one-way ANOVA:
 
-The study described in question #3 above is best characterized as   	a. 2x2x1   	b. 2x2   	c. 4-factor   	d. Mixed factorial
+   A. SS between
+   B. SS within
+   C. MS between
+   D. All of the above
 
+3. You are comparing how caffeine consumption (Placebo vs. 200 mg) impacts athletic performance (weight lifted), while also accounting for sleep quality (8 hours vs. 4 hours). Different participants are in each condition. This design calls for:
 
+   A. Repeated one-way ANOVAs
+   B. Repeated factorial ANOVAs
+   C. Pairwise t-tests
+   D. Factorial ANOVA
 
+4. The study described in question 3 is best characterized as a:
 
-You are comparing how artistic expression (drawing vs. painting) impacts mood (self-reported happiness), while also accounting for diet (1 meal a day vs. 2 meals a day vs. 3 meals a day). Different participants are included in each condition/combination of conditions. You find a significant main effect of artistic expression. This means:   	a. The degrees of freedom are significant for that group   	b. The interaction cannot be statistically significant   	c. The main effect of diet is unlikely to be statistically significant   	d. None of the above
+   A. 2×2×1 design
+   B. 2×2 factorial design
+   C. 4-factor design
+   D. Mixed factorial design
 
-In the study described in question #5 above, if happiness was higher following painting compared to drawing (p < .05), but only when participants ate one meal per day, than we know:   	a. There is a statistically significant interaction   	b. There is a main effect of diet   	c. There could be (but is not necessarily) a significant interaction   	d. None of the above
+5. You are comparing how artistic expression (Drawing vs. Painting) impacts mood (self-reported happiness), while also accounting for diet (1, 2, or 3 meals per day). You find a significant main effect of artistic expression. This means:
 
-In a factorial ANOVA, under the null hypothesis, the expected value of the F ratio is approximately THIS value for each factor and the interaction:   	a. 0   	b. 1   	c. -1   	d. None of the above
+   A. The degrees of freedom are significant for that factor
+   B. The interaction cannot be statistically significant
+   C. The main effect of diet is unlikely to be statistically significant
+   D. None of the above
 
-A 2x4 factorial ANOVA yields F(3, 43) = 3.72 for the variable with 4 levels. Assuming alpha = .05, what should you conclude?   	a. At least one group mean differs in the factor (reject null)   	b. All group means are equal (fail to reject null)   	c. Not enough information to decide   	d. Each sample mean equals zero
+6. In the study described in question 5, happiness was higher following painting compared to drawing (p < .05), but *only* when participants ate one meal per day. This finding indicates:
 
-You conduct a 2x3 factorial ANOVA. How many degrees of freedom does the interaction have?   	a. 3   	b. 4   	c. 2   	d. Not enough information to decide
+   A. There is a statistically significant interaction
+   B. There is a significant main effect of diet
+   C. There could be (but is not necessarily) a significant interaction
+   D. None of the above
 
-A 2x2 factorial ANOVA has within degrees of freedom of 24. Sample size?   	a. 30   	b. 28   	c. 25   	d. Not enough information to decide
+7. In a factorial ANOVA, under the null hypothesis, the expected value of the F ratio for each main effect and the interaction is approximately:
 
+   A. 0
+   B. 1
+   C. −1
+   D. None of the above
 
-Computational Questions (15 points; 5 points each)
-Note: if direction is not specified, use direction implied by hypothesis
+8. A 2×4 factorial ANOVA yields F(3, 43) = 3.72 for the variable with 4 levels. Assuming α = .05, what should you conclude?
 
-For each question
-Find and report critical/cutoff F ratio
-Compute needed information showing steps (e.g., df between, df within, MS between, MS within, F value), showing work along the way
-Complete the ANOVA tables using the information you compute
-Write out a sentence formatted correctly to communicate the key statistical information for each main effect and the interaction:
-Example: F(df-between, df-within) = F-value, p < or > alpha.
-Write out a sentence interpreting the result using common language (again, for each main effect and interaction for each ANOVA)
+   A. At least one group mean differs in that factor — reject the null
+   B. All group means are equal — fail to reject the null
+   C. Not enough information to decide
+   D. Each sample mean equals zero
 
+9. You conduct a 2×3 factorial ANOVA. How many degrees of freedom does the interaction have?
 
-Factorial ANOVA #1 (N = 5 per cell; N total = 20)
+   A. 3
+   B. 4
+   C. 2
+   D. Not enough information to decide
 
+10. A 2×2 factorial ANOVA has within-group degrees of freedom of 24. What is the total sample size?
 
+    A. 30
+    B. 28
+    C. 25
+    D. Not enough information to decide
 
+---
 
+### Computational Questions
 
+*Use α = .05 for all problems.*
 
+For each problem:
 
+- Write out the null and alternative hypotheses for each main effect and the interaction
+- Find and report the critical F value for each effect
+- Compute df, MS, and F for each source, showing work
+- Complete the ANOVA summary table
+- Report each result: F(df~effect~, df~within~) = F-value, p < or > α
+- Interpret each result in plain language
 
+---
 
+**Problem 11** — Factorial ANOVA #1 (2×2; N = 5 per cell; N~total~ = 20)
 
+A researcher examines the combined effects of drug treatment (A: Placebo vs. Active Drug) and therapy type (B: No Therapy vs. Cognitive Therapy) on patient anxiety scores (lower = less anxiety).
 
+**Cell Means:**
 
+| | B1: No Therapy | B2: Therapy | Row Mean |
+|:---|:---:|:---:|:---:|
+| **A1: Placebo** | 10 | 14 | 12.0 |
+| **A2: Drug** | 8 | 12 | 10.0 |
+| **Column Mean** | 9 | 13 | 11.0 |
 
-
-
-
-
-
-
-
-Factorial ANOVA #2 (N = 4 per cell; N total = 24)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Factorial ANOVA #3 (N = 3 per cell; N total = 48)
-
-
-
-
-(Means next page)
-
-
-
+```{r}
+#| eval: false
+# Cell means (Factor A = Drug, Factor B = Therapy)
+cell_means <- matrix(c(10, 14,
+                        8, 12),
+                     nrow = 2, byrow = TRUE,
+                     dimnames = list(A = c("Placebo", "Drug"),
+                                     B = c("No Therapy", "Therapy")))
+n_per_cell <- 5
+```
+
+**ANOVA Summary Table:**
+
+| Source | SS | df | MS | F | Significant? |
+|:---|:--:|:--:|:--:|:--:|:---:|
+| A (Drug) | 8.0 | | | | |
+| B (Therapy) | 32.0 | | | | |
+| A×B | 0.0 | | | | |
+| Within (Error) | 50.0 | | | | |
+| **Total** | 90.0 | 19 | | | |
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+---
+
+**Problem 12** — Factorial ANOVA #2 (2×3; N = 4 per cell; N~total~ = 24)
+
+A nutritionist examines the effects of dietary protein level (A: Low vs. High) and beverage type (B: Water, Coffee, Red Bull) on sustained attention scores (higher = better).
+
+**Cell Means:**
+
+| | B1: Water | B2: Coffee | B3: Red Bull | Row Mean |
+|:---|:---:|:---:|:---:|:---:|
+| **A1: Low Protein** | 12 | 11 | 10 | 11.0 |
+| **A2: High Protein** | 9 | 8 | 7 | 8.0 |
+| **Column Mean** | 10.5 | 9.5 | 8.5 | 9.5 |
+
+```{r}
+#| eval: false
+# Cell means (Factor A = Protein, Factor B = Beverage)
+cell_means <- matrix(c(12, 11, 10,
+                        9,  8,  7),
+                     nrow = 2, byrow = TRUE,
+                     dimnames = list(A = c("Low Protein", "High Protein"),
+                                     B = c("Water", "Coffee", "Red Bull")))
+n_per_cell <- 4
+```
+
+**ANOVA Summary Table:**
+
+| Source | SS | df | MS | F | Significant? |
+|:---|:--:|:--:|:--:|:--:|:---:|
+| A (Protein) | 20.0 | | | | |
+| B (Beverage) | 10.0 | | | | |
+| A×B | 8.0 | | | | |
+| Within (Error) | 72.0 | | | | |
+| **Total** | 110.0 | 23 | | | |
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+---
+
+**Problem 13** — Factorial ANOVA #3 (4×4; N = 3 per cell; N~total~ = 48)
+
+A sports scientist examines the effects of exercise type (A: 4 levels) and supplement dose (B: 4 levels) on aerobic endurance scores (higher = better).
+
+**Cell Means:**
+
+| | B1: Placebo | B2: Low Dose | B3: Med. Dose | B4: High Dose | Row Mean |
+|:---|:---:|:---:|:---:|:---:|:---:|
+| **A1: Sedentary** | 5 | 6 | 7 | 8 | 6.5 |
+| **A2: Cardio Only** | 6 | 7 | 6 | 7 | 6.5 |
+| **A3: Resistance Only** | 8 | 9 | 10 | 11 | 9.5 |
+| **A4: Cardio + Resistance** | 12 | 11 | 10 | 9 | 10.5 |
+| **Column Mean** | 7.75 | 8.25 | 8.25 | 8.75 | 8.75 |
+
+```{r}
+#| eval: false
+# Cell means (Factor A = Exercise, Factor B = Supplement dose)
+cell_means <- matrix(c( 5,  6,  7,  8,
+                         6,  7,  6,  7,
+                         8,  9, 10, 11,
+                        12, 11, 10,  9),
+                     nrow = 4, byrow = TRUE,
+                     dimnames = list(
+                       A = c("Sedentary", "Cardio Only",
+                             "Resistance Only", "Cardio + Resistance"),
+                       B = c("Placebo", "Low Dose", "Med Dose", "High Dose")))
+n_per_cell <- 3
+```
+
+**ANOVA Summary Table:**
+
+| Source | SS | df | MS | F | Significant? |
+|:---|:--:|:--:|:--:|:--:|:---:|
+| A (Exercise) | 30.0 | | | | |
+| B (Supplement) | 12.0 | | | | |
+| A×B | 40.0 | | | | |
+| Within (Error) | 128.0 | | | | |
+| **Total** | 210.0 | 47 | | | |
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;

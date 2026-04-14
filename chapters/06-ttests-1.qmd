@@ -11,106 +11,211 @@
 
 ## Exercises
 
-### Questions (Conceptual)
+### Conceptual Questions
 
-1) Dependent measures t-tests should be used when
-- At all possible
-- We have repeated measurements
-- We are interested in a dependent variable
-- Our independent variable has two levels
+1. Dependent-measures t-tests should be used when:
 
-2) A t-test is preferred over a z-test when we lack information about the
-- Sample size
-- Population mean
-- Population standard deviation
-- Sample variance
+   A. Whenever possible
+   B. We have repeated measurements from the same participants (or matched pairs)
+   C. We are interested in a dependent variable
+   D. Our independent variable has two levels
 
-3) The t-table provides different cutoff values of t for different 
-- Variances
-- Experimental designs
-- Degrees of freedom (N – 1)
-- Types of t-tests (independent vs. dependence)
+2. A t-test is preferred over a z-test when we lack information about the:
 
-4) The t distribution looks like the z (normal) distribution, but only when sample size is sufficiently large
-- TRUE
-- FALSE
+   A. Sample size
+   B. Population mean
+   C. Population standard deviation
+   D. Sample variance
 
-5) A data set has 100 participants, each of whom contributed one response. The mean of the responses is 75.32. How many responses are free to vary?
-- 99
-- 100
-- 1
-- Not enough information to know
+3. The t-table provides different cutoff values of t for different:
 
-### Questions (Computational)
+   A. Variances
+   B. Experimental designs
+   C. Degrees of freedom (N – 1)
+   D. Types of t-tests (independent vs. dependent)
 
-*Note: if direction is not specified, use direction implied by hypothesis*
+4. TRUE or FALSE: The t distribution looks like the z (normal) distribution, but only when sample size is sufficiently large.
 
-An athletic trainer believes a new training protocol increases golf swing speed without sacrificing accuracy. The historical population mean = μ₀ = 98 miles per hour (MPH), but the population standard deviation is unknown! The trainer collected data from N = 12 participants, testing their swing speed after the putting them through the new training protocol. Use α = .05.
+   A. True
+   B. False
 
-|Data|
-|----|
-|103|
-|102|
-|97 |
-|102|
-|99 |
-|105|
-|95 |	
-|98 |
-|99 |
-|105|
-|101|
-|103|
+5. A data set has 100 participants, each contributing one response. The mean of the responses is 75.32. How many responses are free to vary?
 
+   A. 99
+   B. 100
+   C. 1
+   D. Not enough information to know
 
+---
 
-Use the data above to compute the following (2 points):
+### Computational Questions
 
-Sum = 		SS = 
-Mean = 		Variance = 
-N = 		Standard Deviation = 
-DF = 
+*Note: if direction is not specified, use direction implied by hypothesis.*
 
+For each problem: write H₀ and H₁, identify the cutoff value(s), compute the necessary descriptive statistics and t (showing all steps), state your decision, and interpret the result in plain language.
 
-Write H₀/H₁ and determine cutoff (1 point)
+---
 
+**Problem 1** — One-Sample t-Test
 
-The same athletic trainer wants to conduct another study. Instead of trusting the historical population mean, they want to see if the protocol actually increases swing speed within-subjects. They recruit N = 12 participants, testing their swing speed before and after putting them through the new training protocol. Use α = .05.
+An athletic trainer believes a new training protocol increases golf swing speed. The historical population mean is μ₀ = 98 MPH, but the population standard deviation is unknown. N = 12 participants were tested after completing the protocol. Use α = .05.
 
+| Participant | Swing Speed (MPH) |
+|:-----------:|:-----------------:|
+|  1 | 103 |
+|  2 | 102 |
+|  3 |  97 |
+|  4 | 102 |
+|  5 |  99 |
+|  6 | 105 |
+|  7 |  95 |
+|  8 |  98 |
+|  9 |  99 |
+| 10 | 105 |
+| 11 | 101 |
+| 12 | 103 |
 
+```{r}
+#| eval: false
+mu0         <- 98   # historical population mean (MPH)
+swing_speed <- c(103, 102, 97, 102, 99, 105, 95, 98, 99, 105, 101, 103)
+alpha       <- 0.05
+```
 
-	
-	
- 	
-	
-	
+Compute the following before finding t:
 
+| Statistic | Value |
+|:---|:---|
+| Sum = | |
+| N = | |
+| Mean = | |
+| SS = | |
+| Variance = | |
+| SD = | |
+| df = | |
 
-Complete the above table and obtain all values; show work (2 points)
-Write H₀/H₁ and determine cutoff (1 point)
+Write H₀/H₁ and determine the cutoff value:
 
+&nbsp;
 
-Compute t (show work, decide, interpret) (2 points)
+Compute t, state your decision, and interpret:
 
+&nbsp;
 
+&nbsp;
 
+&nbsp;
 
+---
 
-You’re hired by the Minnesota Vikings to conduct an analysis to determine if the Vikings score a different number of points per game (M = 28, SD = 7, based on N = 16 games) than the NFL average (μ₀ = 24). Use α = .01.
+**Problem 2** — Dependent-Measures (Within-Subjects) t-Test
 
-Write H₀/H₁, determine cutoff, compute t (show work, including SE computation), decide, interpret (5 points)
+The same athletic trainer now wants to test whether the protocol increases swing speed *within subjects*. N = 12 participants are tested **before** and **after** the training protocol. Use α = .05.
 
+| Participant | Before (MPH) | After (MPH) | Difference (*D*) | *D* − M̄~D~ | (*D* − M̄~D~)² |
+|:-----------:|:------------:|:-----------:|:----------------:|:----------:|:--------------:|
+|  1 | 101 | 103 | | | |
+|  2 | 102 | 102 | | | |
+|  3 |  95 |  97 | | | |
+|  4 | 102 | 101 | | | |
+|  5 |  99 |  96 | | | |
+|  6 | 101 | 105 | | | |
+|  7 |  93 |  95 | | | |
+|  8 |  97 |  98 | | | |
+|  9 |  99 |  98 | | | |
+| 10 | 103 | 105 | | | |
+| 11 | 101 | 104 | | | |
+| 12 | 101 | 102 | | | |
+| **Sum** | | | | | |
 
+```{r}
+#| eval: false
+before <- c(101, 102, 95, 102, 99, 101, 93, 97, 99, 103, 101, 101)
+after  <- c(103, 102, 97, 101, 96, 105, 95, 98, 98, 105, 104, 102)
+D      <- after - before
+alpha  <- 0.05
+```
 
+Compute the following:
 
+| Statistic | Value |
+|:---|:---|
+| Sum of D = | |
+| Mean of D = | |
+| N = | |
+| SS~D~ = | |
+| Variance~D~ = | |
+| SD~D~ = | |
+| df = | |
 
+Write H₀/H₁ and determine the cutoff value:
 
+&nbsp;
 
+Compute t, state your decision, and interpret:
 
+&nbsp;
 
+&nbsp;
 
-A counseling center uses a standardized depression score where population mean is μ₀ = 22 (lower = fewer symptoms). After a new group-therapy program, the researchers at the center expect to see a decrease in scores. They collect a sample of N = 36 clients who complete the program, finding a mean of 19.2 and standard deviation of 3.5. Use α = .10.
+&nbsp;
 
-Write H₀/H₁, determine cutoff, compute t (show work, including SE computation), decide, interpret (5 points)
+---
 
+**Problem 3** — One-Sample t-Test
 
+You are hired by the Minnesota Vikings to determine if they score a different number of points per game than the NFL average. Use α = .01.
+
+| Parameter | Value |
+|:---|:---|
+| Sample mean (M) | 28 points |
+| Sample SD | 7 |
+| Sample size (N) | 16 games |
+| Population mean (μ₀) | 24 points |
+
+```{r}
+#| eval: false
+mu0   <- 24   # NFL average points per game
+M     <- 28   # Vikings sample mean
+SD    <- 7    # Vikings sample SD
+N     <- 16   # number of games
+alpha <- 0.01
+```
+
+Write H₀/H₁, determine cutoff, compute t, decide, and interpret:
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+---
+
+**Problem 4** — One-Sample t-Test
+
+A counseling center uses a standardized depression score (lower = fewer symptoms), with a known population mean of μ₀ = 22. Researchers expect the new group-therapy program to decrease scores. Use α = .10.
+
+| Parameter | Value |
+|:---|:---|
+| Population mean (μ₀) | 22 |
+| Sample mean (M) | 19.2 |
+| Sample SD | 3.5 |
+| Sample size (N) | 36 |
+
+```{r}
+#| eval: false
+mu0   <- 22    # population mean (lower = fewer symptoms)
+M     <- 19.2  # sample mean
+SD    <- 3.5   # sample SD
+N     <- 36    # sample size
+alpha <- 0.10
+```
+
+Write H₀/H₁, determine cutoff, compute t, decide, and interpret:
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;

@@ -9,98 +9,143 @@
 
 ## Exercises
 
-### Questions (Conceptual)
+### Conceptual Questions
 
-1) The main purpose of a one-way ANOVA is to:
-- Test whether the variance of one sample equals another sample
-- Test whether three or more group means differ significantly (using variance information)
-- Compare two means only
-- Measure the correlation between two variables
+1. The main purpose of a one-way ANOVA is to:
 
-2) In a one-way ANOVA, the total variability in the data is divided into:
-- Within-group and between-group variance components
-- Experimental error and measurement bias
-- Main effects and interactions
-- Population and sampling variance
+   A. Test whether the variance of one sample equals another sample
+   B. Test whether three or more group means differ significantly, using variance information
+   C. Compare exactly two means
+   D. Measure the correlation between two variables
 
-3) You are comparing exam performance across three different study methods. Which test is most appropriate?
-- One-sample t-test
-- Independent-means t-test
-- One-way ANOVA
-- Chi-square test
+2. In a one-way ANOVA, the total variability in the data is divided into:
 
-4) Why is it problematic to run multiple t-tests instead of an ANOVA when comparing 3+ groups?
-- t-tests cannot handle unequal variances
-- t-tests reduce statistical power
-- Multiple t-tests inflate the Type I error rate
-- ANOVA is easier to compute
+   A. Within-group and between-group variance components
+   B. Experimental error and measurement bias
+   C. Main effects and interactions
+   D. Population variance and sampling variance
 
+3. You are comparing exam performance across three different study methods. Which test is most appropriate?
 
-5) The correct null hypothesis for a one-way ANOVA with three groups is:
-- At least one group mean differs
-- All group means are equal
-- The variances across groups are equal
-- Each sample mean equals zero
+   A. One-sample t-test
+   B. Independent-means t-test
+   C. One-way ANOVA
+   D. Chi-square test
 
-6) The F statistic in ANOVA is always positive because:
-- Group means cannot differ in a negative direction
-- The denominator in F is always negative
-- Negative F values are omitted by convention (tradition)
-- F is a ratio of squared quantities (variances)
+4. Why is it problematic to run multiple t-tests instead of an ANOVA when comparing 3 or more groups?
 
-7) Under the null hypothesis, the expected value of the F ratio is approximately:
-- 0
-- 1
-- -1
-- None of the above
+   A. t-tests cannot handle unequal variances
+   B. t-tests reduce statistical power
+   C. Multiple t-tests inflate the Type I error rate
+   D. ANOVA is easier to compute
 
-8) An ANOVA yields F(2, 27) = 5.41, p=.010. Assuming alpha = .05, what should you conclude?
-- At least one group mean differs (reject null)
-- All group means are equal (fail to reject null)
-- Not enough information to decide
-- Each sample mean equals zero
+5. The correct null hypothesis for a one-way ANOVA with three groups is:
 
-9) An ANOVA yields F(2, 27) = 5.41, p=.010. How many GROUPS are being compared?
-- 3
-- 4
-- 2
-- Not enough information to decide
+   A. At least one group mean differs
+   B. All group means are equal
+   C. The variances across groups are equal
+   D. Each sample mean equals zero
 
-10) An ANOVA yields F(2, 27) = 5.41, p=.010. How many PARTICIPANTS were included in this analysis?
-- 3
-- 27
-- 30
-- Not enough information to decide
+6. The F statistic in ANOVA is always positive because:
 
-### Questions (Computational)
+   A. Group means cannot differ in a negative direction
+   B. The denominator in F is always negative
+   C. Negative F values are omitted by convention
+   D. F is a ratio of squared quantities (variances)
 
-*Note: if direction is not specified, use direction implied by hypothesis*
+7. Under the null hypothesis, the expected value of the F ratio is approximately:
 
-For each question:
+   A. 0
+   B. 1
+   C. −1
+   D. None of the above
 
-- Write out the null/alternative hypothesis (short hand is fine)
-- Find and report critical/cutoff F value
-- Compute needed information showing steps (e.g., mean, SS between, SS within, df between, df within, MS between, MS within, F value), showing work along the way
-- Complete an ANOVA table using the information you compute
-- Write out a sentence formatted correctly to communicate the key statistical information:
-    - Example: F(df-between, df-within) = F-value, p < or > alpha.
-- Write out a sentence interpreting the result using common language
+8. An ANOVA yields F(2, 27) = 5.41, p = .010. Assuming α = .05, what should you conclude?
 
+   A. At least one group mean differs — reject the null
+   B. All group means are equal — fail to reject the null
+   C. Not enough information to decide
+   D. Each sample mean equals zero
 
-A researcher tests how puzzle solve-time (minutes) changes when people listen to different music. A total of 15 participants were randomized into three conditions (N = 5 each): no music, classical music, popular music. The raw data is included below. Use α = .05. 
+9. An ANOVA yields F(2, 27) = 5.41, p = .010. How many **groups** are being compared?
 
-No music: 12, 10, 9, 11, 8
-Classical: 15, 14, 13, 16, 15
-Popular: 10, 12, 11, 9, 10
+   A. 3
+   B. 4
+   C. 2
+   D. Not enough information to decide
 
+10. An ANOVA yields F(2, 27) = 5.41, p = .010. How many **participants** were included in this analysis?
 
+    A. 3
+    B. 27
+    C. 30
+    D. Not enough information to decide
 
+---
 
+### Computational Questions
 
-A researcher gets halfway done with their stats and asks you to finish. Use the following to complete an ANOVA table, make a decision to reject/fail to reject (at .05), and everything else requested above. 
+*Note: if direction is not specified, use direction implied by hypothesis.*
 
-SSbetween = 240
-SSwithin = 240
-dfbetween = 2
-dfwithin = 12
+For each problem:
 
+- Write out the null and alternative hypotheses
+- Find and report the critical/cutoff F value
+- Compute all intermediate values, showing steps (group means, SS between, SS within, df between, df within, MS between, MS within, F)
+- Complete an ANOVA summary table
+- Report the result: F(df~between~, df~within~) = F-value, p < or > α
+- Interpret the result in plain language
+
+---
+
+**Problem 1**
+
+A researcher tests how puzzle solve-time (minutes) changes when people listen to different types of music. Fifteen participants were randomized into three conditions (n = 5 each). Use α = .05.
+
+| Participant | No Music | Classical | Popular |
+|:-----------:|:--------:|:---------:|:-------:|
+| 1 | 12 | 15 | 10 |
+| 2 | 10 | 14 | 12 |
+| 3 |  9 | 13 | 11 |
+| 4 | 11 | 16 |  9 |
+| 5 |  8 | 15 | 10 |
+
+```{r}
+#| eval: false
+no_music  <- c(12, 10, 9, 11, 8)
+classical <- c(15, 14, 13, 16, 15)
+popular   <- c(10, 12, 11, 9, 10)
+alpha     <- 0.05
+```
+
+ANOVA Summary Table:
+
+| Source | SS | df | MS | F |
+|:---|:--:|:--:|:--:|:--:|
+| Between | | | | |
+| Within  | | | | |
+| **Total** | | | | |
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+---
+
+**Problem 2**
+
+A researcher has partially completed their analysis. Use the information below to complete the ANOVA table, make a decision at α = .05, and provide all requested interpretations.
+
+| Source | SS | df | MS | F |
+|:---|:--:|:--:|:--:|:--:|
+| Between | 240 | 2 | | |
+| Within  | 240 | 12 | | |
+| **Total** | | | | |
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
