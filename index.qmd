@@ -61,3 +61,7 @@ This project recieved support from the office of Academic and Student Affairs at
 ### Format
 
 This is a Quarto book. To learn more about Quarto books visit <https://quarto.org/docs/books>.
+
+### Notes
+
+*Generative AI was used for parts of this manual, including: code chunk authoring and grammar checking.*

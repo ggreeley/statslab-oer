@@ -13,7 +13,7 @@ book:
     - chapters/04-ztests.qmd
     - chapters/05-hypothesis-testing.qmd
     - chapters/06-ttests-1.qmd
-    - chapters/07-ttests-2.qmd
+    #- chapters/07-ttests-2.qmd
     - chapters/08-anova.qmd
     - chapters/0x-advanced-topics.qmd
     - chapters/summary.qmd
