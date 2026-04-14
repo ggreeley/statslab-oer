@@ -1,0 +1,106 @@
+# One-Way ANOVA
+
+## Key Concepts
+
+- Normal Distribution
+- Variance, Standard Deviation
+- Probability Values
+- Cut-Off Points
+
+## Exercises
+
+### Questions (Conceptual)
+
+The main purpose of a factorial ANOVA is to:   	a. Test whether the variance of one sample equals another sample   	b. Test whether three or more group means differ significantly (using variance information)   	c. Test the main effect of two or more categorical variables, in addition to their interactions (using variance information)   	d. Measure the correlation between two variables
+
+A factorial ANOVA requires computing ____, just like a one-way ANOVA  	a. SS-between   	b. SS-within   	c. MS-between   	d. all of the above
+
+You are comparing how caffeine consumption (placebo vs. 200mg) impacts athletic performance (weight lifted), while also accounting for sleep quality (8-hours vs. 4-hours). Different participants are included in each condition/combination of conditions. This type of design calls for:   	a. Repeated one-way ANOVAs   	b. Repeated factorial ANOVAs   	c. Pairwise t-tests   	d. Factorial ANOVA
+
+The study described in question #3 above is best characterized as   	a. 2x2x1   	b. 2x2   	c. 4-factor   	d. Mixed factorial
+
+
+
+
+You are comparing how artistic expression (drawing vs. painting) impacts mood (self-reported happiness), while also accounting for diet (1 meal a day vs. 2 meals a day vs. 3 meals a day). Different participants are included in each condition/combination of conditions. You find a significant main effect of artistic expression. This means:   	a. The degrees of freedom are significant for that group   	b. The interaction cannot be statistically significant   	c. The main effect of diet is unlikely to be statistically significant   	d. None of the above
+
+In the study described in question #5 above, if happiness was higher following painting compared to drawing (p < .05), but only when participants ate one meal per day, than we know:   	a. There is a statistically significant interaction   	b. There is a main effect of diet   	c. There could be (but is not necessarily) a significant interaction   	d. None of the above
+
+In a factorial ANOVA, under the null hypothesis, the expected value of the F ratio is approximately THIS value for each factor and the interaction:   	a. 0   	b. 1   	c. -1   	d. None of the above
+
+A 2x4 factorial ANOVA yields F(3, 43) = 3.72 for the variable with 4 levels. Assuming alpha = .05, what should you conclude?   	a. At least one group mean differs in the factor (reject null)   	b. All group means are equal (fail to reject null)   	c. Not enough information to decide   	d. Each sample mean equals zero
+
+You conduct a 2x3 factorial ANOVA. How many degrees of freedom does the interaction have?   	a. 3   	b. 4   	c. 2   	d. Not enough information to decide
+
+A 2x2 factorial ANOVA has within degrees of freedom of 24. Sample size?   	a. 30   	b. 28   	c. 25   	d. Not enough information to decide
+
+
+Computational Questions (15 points; 5 points each)
+Note: if direction is not specified, use direction implied by hypothesis
+
+For each question
+Find and report critical/cutoff F ratio
+Compute needed information showing steps (e.g., df between, df within, MS between, MS within, F value), showing work along the way
+Complete the ANOVA tables using the information you compute
+Write out a sentence formatted correctly to communicate the key statistical information for each main effect and the interaction:
+Example: F(df-between, df-within) = F-value, p < or > alpha.
+Write out a sentence interpreting the result using common language (again, for each main effect and interaction for each ANOVA)
+
+
+Factorial ANOVA #1 (N = 5 per cell; N total = 20)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Factorial ANOVA #2 (N = 4 per cell; N total = 24)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Factorial ANOVA #3 (N = 3 per cell; N total = 48)
+
+
+
+
+(Means next page)
+
+
+

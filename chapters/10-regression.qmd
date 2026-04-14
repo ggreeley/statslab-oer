@@ -1,0 +1,113 @@
+# Regression
+
+## Key Concepts
+
+- ...
+- ...
+- ...
+- ...
+
+## Exercises
+
+### Questions (Conceptual)
+
+Simple regression provides additional information above and beyond correlation, namely estimates for:   	a. Strength and direction   	b. Slope and intercept   	c. Relationship and distance
+d. Non-linear dynamics
+
+The slope estimate in a regression formula is the:  	a. alpha   	b. beta ratio    	c. “X” term in the formula   	d. beta coefficient
+
+Regression determines the characteristics of a line that fits through data. Specifically, this line:   	a. Intersects with the x-axis when data values are positive   	b. Intersects as many data points as possible   	c. Maximizes the sum of the vertical distances between the data and the line   	d. Minimizes the sum of the vertical distances between the data and the line
+
+Y-hat is:   	a. The predicted Y based on the regression formula   	b. The observed Y based on the regression formula   	c. Inversely correlated with observed Y values   	d. Not a value related to regression at all
+
+Multiple regression can accommodate “predictor” variables of various types (e.g., categorical):   	a. TRUE   	b. FALSE
+
+Y-hat = bX: what is missing, if anything, from this formula?:   	a. The slope   	b. The intercept   	c. The variable   	d. Nothing is missing
+
+U the null hypothesis, the expected value of a beta coefficient is approximately THIS value:   	a. 0   	b. 0.5 (bound by 0 and 1)   	c. -1   	d. 0.1
+
+Regression is BLUE. What does that mean?   	a. Best Non-Linear Unbiased Estimate   	b. Best Line Under Expected Value
+c. Big Line Unsure Equivalence
+d. Best Linear Unbiased Estimate
+
+Multiple regression can accommodate two categorical predictors and NO continuous predictors.   	a. TRUE   	b. FALSE   	d. Not enough information to decide
+
+Dr. B conducts a regression predicting attendance at an academic conference (number of days visiting speakers) from attendee age (in years). That is, age is “X” – in this case, assuming age isn’t normalized into z-scores, the intercept will be:   	a. Not computable, but would be sensical   	b. Computable, but non-sensical   	c. Not computable, but sensical   	d. None of the above
+
+
+
+
+
+
+
+
+
+
+
+### Questions (Computational)
+
+Note: if direction is not specified, use direction implied by hypothesis
+
+For each question
+Solve the regression formula for the given data
+Show steps as needed
+
+Regression formula: Y-hat = 3.5X + 13
+
+X = 1
+
+
+X = 9
+
+
+X = 24
+
+
+Plot the regression line for X = [1, 3, 9], ensuring that you label the figure correctly.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Regression formula: Y-hat = 3.5X + 1W + 13 (no need to plot this one)
+
+X = 1; W = 1
+
+
+X = 9; W = 5
+
+
+X = 24; W = 30
+
+
+X = 3; W = 0
+
+
+X = 0; W = 0
+Regression formula: Y-hat = 3X + -0.6W + 11 (no need to plot this one + note the negative coefficient associated with the W variable!)
+
+X = 1; W = 1
+
+
+X = 9; W = 5
+
+
+X = 24; W = 30
+
+
+X = 3; W = 0
+
+
+X = 0; W = 0
+
+
+### Questions (Computational)

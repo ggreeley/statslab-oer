@@ -1,0 +1,86 @@
+# Correlation
+
+## Key Concepts
+
+- ...
+- ...
+- ...
+- ...
+
+## Exercises
+
+### Questions (Conceptual)
+
+The main purpose of a Pearson correlation is to:   	a. Test the linear relationship between two continuous variables   	b. Test the monotonic relationship between two continuous variables   	c. Test how the means of two independent groups correlate (using variance information)   	d. Test the generic association between two or more continuous variables
+
+Like other tests we’ve covered, correlation also involves computing the  	a. SS-between   	b. MS-within    	c. SS for each group   	d. all of the above
+
+Why is it important to plot data when examining correlations:   	a. There may be a non-linear relationship that’s not properly characterized with a correlation   	b. There could be a monotonic, but not a linear relationship   	c. There may be outliers   	d. All of the above are reasonable answers
+
+As “X” increases, so does “Y” – this is probably a:   	a. Negative correlation   	b. Positive correlation   	c. Spearman rho   	d. Inverse correlation
+
+This correlation metric is not as susceptible to outliers:   	a. Spearman rho   	b. Spearman ratio   	c. Pearson   	d. F-ratio
+
+Which of the following relationships is probably negatively correlated:   	a. Hours slept and dreams had   	b. Blood alcohol content and car accident probability   	c. Hours slept and hours standing   	d. None of the above; correlations cannot be less than 0
+
+In a correlation (Pearson or Spearman), under the null hypothesis, the expected value of the r is approximately THIS value:   	a. 0.1   	b. 0.5 (bound by 0 and 1)   	c. -1   	d. 0
+
+A researcher found that when people have very little sleep (<5 hours), they feel miserable. When they have a reasonable amount of sleep (7-9 hours), the feel pretty good. When they have lots of sleep (10+ hours), the feel pretty miserable again. This relationship between sleep and feeling miserable is linear.   	a. TRUE   	b. FALSE
+c. Not enough information to decide
+
+If you compute the correlation between X and Y, and find a positive correlation (e.g., 0.5), computing the correlation between Y and X will reverse the trend (e.g., will be -0.5).   	a. TRUE   	b. FALSE   	d. Not enough information to decide
+
+Fahrenheit and Celsius (the temperature metric, not the energy drink!) are two scales that can be converted into one another (e.g., 0c = 32f). The daily temperature in Winona is measure in both, and at the end of the year:   	a. They are perfectly correlated   	b. Plotting them, all points would be in a perfect diagonal   	c. They are perfectly linear   	d. All of the above
+
+
+
+
+
+
+### Questions (Computational)
+
+Note: if direction is not specified, use direction implied by hypothesis
+
+For each question
+Find and report Pearson r, t, and critical t
+Compute needed information showing steps (e.g., means, deviations, squared deviations, SS), showing work along the way; be sure to include the sum of cross products
+Complete the table in #11 using the information you compute; make your own similar tables for the data given in #12 and #13
+Write out a sentence formatted correctly to communicate the key statistical information for each main effect and the interaction:
+Example: r(df) = r value, p < or > alpha.
+
+Pearson correlation #1:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Pearson correlation #2 (n = 7)
+X (hours exercised in week)    = 3, 7, 6, 6, 10, 9, 0
+Y (self-reported stress)            = 10, 4, 5, 4, 2, 2, 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Pearson correlation #3 (n = 12)
+
+
