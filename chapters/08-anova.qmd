@@ -7,6 +7,34 @@
 - Probability Values
 - Cut-Off Points
 
+## Key Formulas
+
+$$F = \frac{MS_{between}}{MS_{within}}$$
+
+$$MS_{between} = \frac{SS_{between}}{df_{between}}, \qquad MS_{within} = \frac{SS_{within}}{df_{within}}$$
+
+$$df_{between} = k - 1, \qquad df_{within} = N - k$$
+
+## Code Examples
+
+```{r}
+#| eval: false
+library(palmerpenguins)
+library(tidyverse)
+
+penguins |>
+  drop_na(flipper_length_mm) |>
+  group_by(species) |>
+  summarise(M = mean(flipper_length_mm), SD = sd(flipper_length_mm), n = n())
+```
+
+```{r}
+#| eval: false
+penguins_clean <- penguins |> drop_na(flipper_length_mm)
+
+aov(flipper_length_mm ~ species, data = penguins_clean) |> summary()
+```
+
 ## Exercises
 
 ### Conceptual Questions
@@ -14,71 +42,101 @@
 1. The main purpose of a one-way ANOVA is to:
 
    A. Test whether the variance of one sample equals another sample
+
    B. Test whether three or more group means differ significantly, using variance information
+
    C. Compare exactly two means
+
    D. Measure the correlation between two variables
 
 2. In a one-way ANOVA, the total variability in the data is divided into:
 
    A. Within-group and between-group variance components
+
    B. Experimental error and measurement bias
+
    C. Main effects and interactions
+
    D. Population variance and sampling variance
 
 3. You are comparing exam performance across three different study methods. Which test is most appropriate?
 
    A. One-sample t-test
+
    B. Independent-means t-test
+
    C. One-way ANOVA
+
    D. Chi-square test
 
 4. Why is it problematic to run multiple t-tests instead of an ANOVA when comparing 3 or more groups?
 
    A. t-tests cannot handle unequal variances
+
    B. t-tests reduce statistical power
+
    C. Multiple t-tests inflate the Type I error rate
+
    D. ANOVA is easier to compute
 
 5. The correct null hypothesis for a one-way ANOVA with three groups is:
 
    A. At least one group mean differs
+
    B. All group means are equal
+
    C. The variances across groups are equal
+
    D. Each sample mean equals zero
 
 6. The F statistic in ANOVA is always positive because:
 
    A. Group means cannot differ in a negative direction
+
    B. The denominator in F is always negative
+
    C. Negative F values are omitted by convention
+
    D. F is a ratio of squared quantities (variances)
 
 7. Under the null hypothesis, the expected value of the F ratio is approximately:
 
    A. 0
+
    B. 1
+
    C. −1
+
    D. None of the above
 
 8. An ANOVA yields F(2, 27) = 5.41, p = .010. Assuming α = .05, what should you conclude?
 
    A. At least one group mean differs — reject the null
+
    B. All group means are equal — fail to reject the null
+
    C. Not enough information to decide
+
    D. Each sample mean equals zero
 
 9. An ANOVA yields F(2, 27) = 5.41, p = .010. How many **groups** are being compared?
 
    A. 3
+
    B. 4
+
    C. 2
+
    D. Not enough information to decide
 
 10. An ANOVA yields F(2, 27) = 5.41, p = .010. How many **participants** were included in this analysis?
 
     A. 3
+
     B. 27
+
     C. 30
+
     D. Not enough information to decide
 
 ---

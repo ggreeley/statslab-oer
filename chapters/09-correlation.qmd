@@ -7,6 +7,33 @@
 - Sum of Cross Products
 - Linear vs. Non-Linear Relationships
 
+## Key Formulas
+
+$$r = \frac{\sum(X - \bar{X})(Y - \bar{Y})}{\sqrt{SS_X \cdot SS_Y}}$$
+
+$$t = r\sqrt{\frac{n-2}{1-r^2}}$$
+
+$$df = n - 2$$
+
+## Code Examples
+
+```{r}
+#| eval: false
+library(palmerpenguins)
+library(tidyverse)
+
+penguins |>
+  drop_na(bill_length_mm, flipper_length_mm) |>
+  summarise(r = cor(bill_length_mm, flipper_length_mm))
+```
+
+```{r}
+#| eval: false
+penguins_clean <- penguins |> drop_na(bill_length_mm, flipper_length_mm)
+
+cor.test(penguins_clean$bill_length_mm, penguins_clean$flipper_length_mm)
+```
+
 ## Exercises
 
 ### Conceptual Questions
@@ -14,67 +41,93 @@
 1. The main purpose of a Pearson correlation is to:
 
    A. Test the linear relationship between two continuous variables
+
    B. Test the monotonic relationship between two continuous variables
+
    C. Test how the means of two independent groups correlate (using variance information)
+
    D. Test the generic association between two or more continuous variables
 
 2. Like other tests we have covered, correlation also involves computing:
 
    A. SS between
+
    B. MS within
+
    C. SS for each variable
+
    D. All of the above
 
 3. Why is it important to plot data when examining correlations?
 
    A. There may be a non-linear relationship not properly characterized by a correlation coefficient
+
    B. There could be a monotonic but not a linear relationship
+
    C. There may be outliers
+
    D. All of the above are reasonable answers
 
 4. As X increases, so does Y — this is probably a:
 
    A. Negative correlation
+
    B. Positive correlation
+
    C. Spearman rho
+
    D. Inverse correlation
 
 5. This correlation metric is less susceptible to outliers:
 
    A. Spearman rho
+
    B. Spearman ratio
+
    C. Pearson r
+
    D. F-ratio
 
 6. Which of the following relationships is probably negatively correlated?
 
    A. Hours slept and number of dreams had
+
    B. Blood alcohol content and car accident probability
+
    C. Hours slept and hours standing
+
    D. None of the above; correlations cannot be less than 0
 
 7. In a Pearson or Spearman correlation, under the null hypothesis, the expected value of r is approximately:
 
    A. 0.1
+
    B. 0.5
+
    C. −1
+
    D. 0
 
 8. TRUE or FALSE: A researcher found that very little sleep (<5 hours) and very much sleep (10+ hours) are both associated with feeling miserable, while moderate sleep (7–9 hours) is associated with feeling good. This U-shaped relationship between sleep and mood is best described as linear.
 
    A. True
+
    B. False
 
 9. TRUE or FALSE: If the correlation between X and Y is r = 0.5, then the correlation between Y and X will be r = −0.5.
 
    A. True
+
    B. False
 
 10. Daily temperature is measured in both Fahrenheit and Celsius for an entire year. When you correlate the two scales:
 
     A. They are perfectly correlated (r = 1.0)
+
     B. Plotting them, all points fall on a perfect diagonal line
+
     C. They are perfectly linearly related
+
     D. All of the above
 
 ---

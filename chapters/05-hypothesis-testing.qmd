@@ -8,9 +8,44 @@
 - Type 1 and Type 2 Errors
 - Power
 
+## Key Formulas
+
+$$z = \frac{M - \mu_0}{SE}$$
+
+$$SE = \frac{\sigma}{\sqrt{n}}$$
+
+$$\text{Power} = 1 - \beta$$
+
 ## Introduction...
 
 Begin...
+
+## Code Examples
+
+```{r}
+#| eval: false
+library(palmerpenguins)
+library(tidyverse)
+
+mu0   <- 200
+sigma <- 14
+
+adelie <- penguins |>
+  filter(species == "Adelie") |>
+  drop_na(flipper_length_mm)
+
+M  <- mean(adelie$flipper_length_mm)
+n  <- nrow(adelie)
+SE <- sigma / sqrt(n)
+z  <- (M - mu0) / SE
+z
+```
+
+```{r}
+#| eval: false
+p <- 2 * pnorm(-abs(z))
+p
+```
 
 ## Exercises
 
@@ -19,71 +54,101 @@ Begin...
 1. In hypothesis testing, the null hypothesis (H₀) usually states that:
 
    A. There is no effect or no difference
+
    B. There is a difference in the expected direction
+
    C. The researcher's prediction is true
+
    D. The effect size is large
 
 2. The alternative hypothesis (H₁) in a one-tailed test states that:
 
    A. The sample mean differs from the population mean in either direction
+
    B. The sample mean is greater (or less) than the population mean, depending on prediction
+
    C. The population mean equals the sample mean
+
    D. Type I error is impossible
 
 3. A Type I error occurs when:
 
    A. You fail to reject H₀ when it is false
+
    B. You reject H₀ when it is true
+
    C. You reject H₁ when it is true
+
    D. The p-value equals the effect size
 
 4. A Type II error occurs when:
 
    A. You reject H₀ when it is true
+
    B. You fail to reject H₀ when it is false
+
    C. α is greater than β
+
    D. You set α = .05 instead of .01
 
 5. Statistical power is defined as:
 
    A. The probability of rejecting H₀ when H₀ is true
+
    B. The probability of rejecting H₀ when H₀ is false
+
    C. The probability of making a Type I error
+
    D. The probability of failing to reject H₀
 
 6. Which of the following increases statistical power?
 
    A. Smaller sample size
+
    B. Lower α (e.g., .01 vs. .05)
+
    C. Larger sample size
+
    D. More variability in the data
 
 7. Which α level would make it harder to reject H₀?
 
    A. α = .05
+
    B. α = .10
+
    C. α = .01
+
    D. α = .50
 
 8. A researcher predicts that caffeine improves memory recall. Which is the correct null hypothesis?
 
    A. Caffeine improves recall
+
    B. Caffeine impairs recall
+
    C. Caffeine has no effect on recall
+
    D. Caffeine improves recall more than nicotine
 
 9. If a study has low power, what is most likely to happen?
 
    A. More Type I errors
+
    B. More Type II errors
+
    C. More correct rejections of H₀
+
    D. Effect size increases
 
 10. The critical z value for a two-tailed test at α = .05 is:
 
     A. ±1.28
+
     B. ±1.645
+
     C. ±1.96
+
     D. ±2.58
 
 ---

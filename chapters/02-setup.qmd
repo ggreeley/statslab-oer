@@ -20,3 +20,11 @@ Go to [link](link)
 ### Installing R Studio
 
 Go to [link](link)
+
+### Starting Packages
+
+```{r}
+#| eval: false
+install.packages(tidyverse)
+install.packages(palmerpenguins)
+```

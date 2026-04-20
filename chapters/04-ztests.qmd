@@ -7,7 +7,43 @@
 - Probability Values
 - Cut-Off Points
 
+## Key Formulas
+
+$$z = \frac{X - \mu}{\sigma}$$
+
+$$SE = \frac{\sigma}{\sqrt{n}}$$
+
+$$z = \frac{M - \mu}{\sigma / \sqrt{n}}$$
+
 ## Introduction...
+
+## Code Examples
+
+```{r}
+#| eval: false
+library(palmerpenguins)
+library(tidyverse)
+
+mu    <- 45.1
+sigma <- 5.5
+
+penguins |>
+  drop_na(bill_length_mm) |>
+  mutate(z = (bill_length_mm - mu) / sigma) |>
+  select(species, bill_length_mm, z) |>
+  head(8)
+```
+
+```{r}
+#| eval: false
+pnorm(1.0)
+
+z    <- 1.5
+mu   <- 45.1
+sigma <- 5.5
+X    <- z * sigma + mu
+X
+```
 
 ## Exercises
 
@@ -16,67 +52,93 @@
 1. The normal distribution is symmetric about its:
 
    A. Mode only
+
    B. Median only
+
    C. Mean, median, and mode (all three are equal)
+
    D. Variance
 
 2. Approximately what percentage of scores in a normal distribution fall within ±1 standard deviation of the mean?
 
    A. 50%
+
    B. 68%
+
    C. 95%
+
    D. 99.7%
 
 3. Approximately what percentage of scores in a normal distribution fall within ±2 standard deviations of the mean?
 
    A. 50%
+
    B. 68%
+
    C. 95%
+
    D. 99.7%
 
 4. In a one-tailed test where the researcher predicts scores will be *higher* than average, the rejection region is located in:
 
    A. The lower tail of the distribution
+
    B. Both tails equally
+
    C. The upper tail of the distribution
+
    D. The center of the distribution
 
 5. The null hypothesis for a z-test typically states:
 
    A. The sample mean is significantly different from the population mean
+
    B. There is no difference between the sample mean and the population mean
+
    C. The sample mean is greater than the population mean
+
    D. The population standard deviation equals zero
 
 6. In a two-tailed test at α = .05, the rejection regions occupy:
 
    A. The upper 5% of the distribution only
+
    B. The lower 5% of the distribution only
+
    C. 2.5% in each tail (5% total)
+
    D. The central 5% of the distribution
 
 7. The standard error of the mean (SE) is computed as:
 
    A. $SE = \sigma \cdot \sqrt{n}$
+
    B. $SE = \dfrac{\sigma}{n}$
+
    C. $SE = \dfrac{\sigma}{\sqrt{n}}$
+
    D. $SE = \dfrac{\sigma^2}{n}$
 
 8. When α = .05, the critical z values for a two-tailed test are:
 
    A. ±1.28
+
    B. ±1.645
+
    C. ±1.96
+
    D. ±2.58
 
 9. TRUE or FALSE: If the obtained z statistic falls beyond the critical value (into the rejection region), we reject the null hypothesis.
 
    A. True
+
    B. False
 
 10. TRUE or FALSE: A two-tailed test is appropriate when the researcher has a specific directional prediction (e.g., predicts scores will increase).
 
     A. True
+
     B. False
 
 ---

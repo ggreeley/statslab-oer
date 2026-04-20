@@ -7,7 +7,37 @@
 - Probability Values
 - Cut-Off Points
 
+## Key Formulas
+
+$$t = \frac{M - \mu_0}{s / \sqrt{N}}$$
+
+$$t = \frac{\bar{D}}{s_D / \sqrt{N}}$$
+
+$$SE = \frac{s}{\sqrt{N}}, \qquad df = N - 1$$
+
 ## Introduction...
+
+## Code Examples
+
+```{r}
+#| eval: false
+library(palmerpenguins)
+library(tidyverse)
+
+adelie <- penguins |>
+  filter(species == "Adelie") |>
+  drop_na(flipper_length_mm)
+
+t.test(adelie$flipper_length_mm, mu = 190)
+```
+
+```{r}
+#| eval: false
+penguins |>
+  drop_na(bill_length_mm, bill_depth_mm) |>
+  slice_head(n = 20) |>
+  with(t.test(bill_length_mm, bill_depth_mm, paired = TRUE))
+```
 
 ## Exercises
 
@@ -16,34 +46,47 @@
 1. Dependent-measures t-tests should be used when:
 
    A. Whenever possible
+
    B. We have repeated measurements from the same participants (or matched pairs)
+
    C. We are interested in a dependent variable
+
    D. Our independent variable has two levels
 
 2. A t-test is preferred over a z-test when we lack information about the:
 
    A. Sample size
+
    B. Population mean
+
    C. Population standard deviation
+
    D. Sample variance
 
 3. The t-table provides different cutoff values of t for different:
 
    A. Variances
+
    B. Experimental designs
+
    C. Degrees of freedom (N – 1)
+
    D. Types of t-tests (independent vs. dependent)
 
 4. TRUE or FALSE: The t distribution looks like the z (normal) distribution, but only when sample size is sufficiently large.
 
    A. True
+
    B. False
 
 5. A data set has 100 participants, each contributing one response. The mean of the responses is 75.32. How many responses are free to vary?
 
    A. 99
+
    B. 100
+
    C. 1
+
    D. Not enough information to know
 
 ---

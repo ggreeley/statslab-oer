@@ -6,3 +6,34 @@
 - Variance, Standard Deviation
 - Probability Values
 - Cut-Off Points
+
+## Key Formulas
+
+$$t = \frac{M_1 - M_2}{s_p\sqrt{\dfrac{1}{n_1} + \dfrac{1}{n_2}}}$$
+
+$$s_p^2 = \frac{SS_1 + SS_2}{df_1 + df_2}$$
+
+$$df = N_{total} - 2$$
+
+## Code Examples
+
+```{r}
+#| eval: false
+library(palmerpenguins)
+library(tidyverse)
+
+two_species <- penguins |>
+  filter(species %in% c("Adelie", "Chinstrap")) |>
+  drop_na(flipper_length_mm)
+
+t.test(flipper_length_mm ~ species, data = two_species, var.equal = TRUE)
+```
+
+```{r}
+#| eval: false
+penguins |>
+  filter(species %in% c("Adelie", "Chinstrap")) |>
+  drop_na(flipper_length_mm) |>
+  group_by(species) |>
+  summarise(M = mean(flipper_length_mm), SD = sd(flipper_length_mm), n = n())
+```

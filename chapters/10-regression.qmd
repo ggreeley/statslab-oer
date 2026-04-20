@@ -7,6 +7,31 @@
 - Slope and Intercept
 - Predicted Values (Ŷ)
 
+## Key Formulas
+
+$$\hat{Y} = bX + a$$
+
+$$b = r \cdot \frac{s_Y}{s_X}, \qquad a = \bar{Y} - b\bar{X}$$
+
+## Code Examples
+
+```{r}
+#| eval: false
+library(palmerpenguins)
+library(tidyverse)
+
+penguins_clean <- penguins |> drop_na(bill_length_mm, flipper_length_mm)
+
+lm(flipper_length_mm ~ bill_length_mm, data = penguins_clean) |> summary()
+```
+
+```{r}
+#| eval: false
+penguins_clean <- penguins |> drop_na(bill_length_mm, flipper_length_mm, body_mass_g)
+
+lm(flipper_length_mm ~ bill_length_mm + body_mass_g, data = penguins_clean) |> summary()
+```
+
 ## Exercises
 
 ### Conceptual Questions
@@ -14,67 +39,93 @@
 1. Simple regression provides additional information above and beyond correlation, namely estimates for:
 
    A. Strength and direction
+
    B. Slope and intercept
+
    C. Relationship and distance
+
    D. Non-linear dynamics
 
 2. The slope estimate in a regression formula is the:
 
    A. Alpha
+
    B. Beta ratio
+
    C. "X" term in the formula
+
    D. Beta coefficient
 
 3. Regression determines the characteristics of a line that best fits through the data. Specifically, this line:
 
    A. Intersects the x-axis when data values are positive
+
    B. Intersects as many data points as possible
+
    C. Maximizes the sum of the vertical distances between the data and the line
+
    D. Minimizes the sum of the squared vertical distances between the data and the line
 
 4. Ŷ (Y-hat) is:
 
    A. The predicted Y value based on the regression formula
+
    B. The observed Y value based on the regression formula
+
    C. Inversely correlated with observed Y values
+
    D. Not a value related to regression at all
 
 5. TRUE or FALSE: Multiple regression can accommodate predictor variables of various types, including categorical predictors.
 
    A. True
+
    B. False
 
 6. Consider the formula Ŷ = bX. What is missing, if anything?
 
    A. The slope
+
    B. The intercept
+
    C. The predictor variable
+
    D. Nothing is missing
 
 7. Under the null hypothesis, the expected value of a beta coefficient is approximately:
 
    A. 0
+
    B. 0.5
+
    C. −1
+
    D. 0.1
 
 8. Regression is BLUE. What does that mean?
 
    A. Best Non-Linear Unbiased Estimate
+
    B. Best Line Under Expected Value
+
    C. Big Line Unsure Equivalence
+
    D. Best Linear Unbiased Estimate
 
 9. TRUE or FALSE: Multiple regression can accommodate two categorical predictors and no continuous predictors.
 
    A. True
+
    B. False
 
 10. Dr. B conducts a regression predicting conference attendance (number of days) from attendee age (in years). Assuming age is not normalized into z-scores, the intercept will be:
 
     A. Not computable, but would be sensical
+
     B. Computable, but non-sensical
+
     C. Not computable, but sensical
+
     D. None of the above
 
 ---

@@ -7,7 +7,42 @@
 - Variance, Standard Deviation
 - Z Scores
 
+## Key Formulas
+
+$$\bar{X} = \frac{\sum X}{N}$$
+
+$$s^2 = \frac{\sum (X - \bar{X})^2}{N-1}$$
+
+$$s = \sqrt{\frac{\sum (X - \bar{X})^2}{N-1}}$$
+
+$$z = \frac{X - \bar{X}}{s}$$
+
 ## Introduction...
+
+## Code Examples
+
+```{r}
+#| eval: false
+library(palmerpenguins)
+library(tidyverse)
+
+penguins |>
+  drop_na(bill_length_mm) |>
+  summarise(
+    M   = mean(bill_length_mm),
+    Var = var(bill_length_mm),
+    SD  = sd(bill_length_mm)
+  )
+```
+
+```{r}
+#| eval: false
+penguins |>
+  drop_na(bill_length_mm) |>
+  mutate(z_bill = (bill_length_mm - mean(bill_length_mm)) / sd(bill_length_mm)) |>
+  select(species, bill_length_mm, z_bill) |>
+  head(8)
+```
 
 ## Exercises
 
@@ -60,67 +95,93 @@ launch_sauce_group <- c(20, 33, 38, 29, 34, 28, 26, 37, 41, 30, 25, 41)
 1. The formula for the mean of a sample is:
 
    A. $\bar{X} = \dfrac{\sum X^2}{N}$
+
    B. $\bar{X} = \dfrac{\sum X}{N}$
+
    C. $\bar{X} = \dfrac{\sum X}{N-1}$
+
    D. $\bar{X} = \dfrac{\sum (X - \bar{X})}{N}$
 
 2. The formula for the variance of a sample is:
 
    A. $s^2 = \dfrac{\sum (X - \bar{X})}{N-1}$
+
    B. $s^2 = \dfrac{\sum (X - \bar{X})^2}{N}$
+
    C. $s^2 = \dfrac{\sum (X - \bar{X})^2}{N-1}$
+
    D. $s^2 = \sqrt{\dfrac{\sum (X - \bar{X})^2}{N-1}}$
 
 3. The formula for the standard deviation of a sample is:
 
    A. $s = \dfrac{\sum (X - \bar{X})^2}{N-1}$
+
    B. $s = \sqrt{\dfrac{\sum (X - \bar{X})^2}{N}}$
+
    C. $s = \sqrt{\dfrac{\sum (X - \bar{X})^2}{N-1}}$
+
    D. $s = \dfrac{\sum (X - \bar{X})^2}{N}$
 
 4. The formula for computing a z-score from a raw score is:
 
    A. $z = \dfrac{\bar{X} - X}{s}$
+
    B. $z = \dfrac{X - \bar{X}}{s^2}$
+
    C. $z = \dfrac{X - \bar{X}}{s}$
+
    D. $z = X \cdot s + \bar{X}$
 
 5. The formula for computing a raw score from a z-score is:
 
    A. $X = \dfrac{z}{s} + \bar{X}$
+
    B. $X = z \cdot s - \bar{X}$
+
    C. $X = z \cdot s + \bar{X}$
+
    D. $X = \dfrac{z - \bar{X}}{s}$
 
 6. Which of the following best describes what a z-score represents?
 
    A. The raw score minus the median, expressed in units of variance
+
    B. The number of standard deviations a score is above or below the mean
+
    C. The probability that a score occurs in a normal distribution
+
    D. The percentile rank of a score within a sample
 
 7. If a value is exactly equal to the mean, its corresponding z-score will always be:
 
    A. 1
+
    B. Undefined
+
    C. 0
+
    D. Equal to the standard deviation
 
 8. If a value is exactly one standard deviation above the mean, its z-score will always be:
 
    A. 0
+
    B. −1
+
    C. 1
+
    D. It depends on the sample size
 
 9. TRUE or FALSE: If value "A" is 3.5 standard deviations above the mean, it is guaranteed that any randomly selected data point will be less than "A," because z-scores max out at ±3.5.
 
    A. True
+
    B. False
 
 10. TRUE or FALSE: Computing z-scores allows us to "normalize" data with respect to the mean, making it possible to compare performance across different outcomes (e.g., comparing a height score to a memory score).
 
     A. True
+
     B. False
 
 ---

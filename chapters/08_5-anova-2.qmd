@@ -7,6 +7,34 @@
 - Factorial Design
 - Between-Group Variance
 
+## Key Formulas
+
+$$F_A = \frac{MS_A}{MS_{within}}, \qquad F_B = \frac{MS_B}{MS_{within}}, \qquad F_{A \times B} = \frac{MS_{A \times B}}{MS_{within}}$$
+
+$$df_A = a - 1, \qquad df_B = b - 1, \qquad df_{A \times B} = df_A \times df_B$$
+
+$$df_{within} = N - (a \times b)$$
+
+## Code Examples
+
+```{r}
+#| eval: false
+library(palmerpenguins)
+library(tidyverse)
+
+penguins |>
+  drop_na(flipper_length_mm, sex) |>
+  group_by(species, sex) |>
+  summarise(M = mean(flipper_length_mm), .groups = "drop")
+```
+
+```{r}
+#| eval: false
+penguins_clean <- penguins |> drop_na(flipper_length_mm, sex)
+
+aov(flipper_length_mm ~ species * sex, data = penguins_clean) |> summary()
+```
+
 ## Exercises
 
 ### Conceptual Questions
@@ -14,71 +42,101 @@
 1. The main purpose of a factorial ANOVA is to:
 
    A. Test whether the variance of one sample equals another sample
+
    B. Test whether three or more group means differ significantly, using variance information
+
    C. Test the main effects of two or more categorical variables and their interaction, using variance information
+
    D. Measure the correlation between two variables
 
 2. A factorial ANOVA requires computing ____, just like a one-way ANOVA:
 
    A. SS between
+
    B. SS within
+
    C. MS between
+
    D. All of the above
 
 3. You are comparing how caffeine consumption (Placebo vs. 200 mg) impacts athletic performance (weight lifted), while also accounting for sleep quality (8 hours vs. 4 hours). Different participants are in each condition. This design calls for:
 
    A. Repeated one-way ANOVAs
+
    B. Repeated factorial ANOVAs
+
    C. Pairwise t-tests
+
    D. Factorial ANOVA
 
 4. The study described in question 3 is best characterized as a:
 
    A. 2×2×1 design
+
    B. 2×2 factorial design
+
    C. 4-factor design
+
    D. Mixed factorial design
 
 5. You are comparing how artistic expression (Drawing vs. Painting) impacts mood (self-reported happiness), while also accounting for diet (1, 2, or 3 meals per day). You find a significant main effect of artistic expression. This means:
 
    A. The degrees of freedom are significant for that factor
+
    B. The interaction cannot be statistically significant
+
    C. The main effect of diet is unlikely to be statistically significant
+
    D. None of the above
 
 6. In the study described in question 5, happiness was higher following painting compared to drawing (p < .05), but *only* when participants ate one meal per day. This finding indicates:
 
    A. There is a statistically significant interaction
+
    B. There is a significant main effect of diet
+
    C. There could be (but is not necessarily) a significant interaction
+
    D. None of the above
 
 7. In a factorial ANOVA, under the null hypothesis, the expected value of the F ratio for each main effect and the interaction is approximately:
 
    A. 0
+
    B. 1
+
    C. −1
+
    D. None of the above
 
 8. A 2×4 factorial ANOVA yields F(3, 43) = 3.72 for the variable with 4 levels. Assuming α = .05, what should you conclude?
 
    A. At least one group mean differs in that factor — reject the null
+
    B. All group means are equal — fail to reject the null
+
    C. Not enough information to decide
+
    D. Each sample mean equals zero
 
 9. You conduct a 2×3 factorial ANOVA. How many degrees of freedom does the interaction have?
 
    A. 3
+
    B. 4
+
    C. 2
+
    D. Not enough information to decide
 
 10. A 2×2 factorial ANOVA has within-group degrees of freedom of 24. What is the total sample size?
 
     A. 30
+
     B. 28
+
     C. 25
+
     D. Not enough information to decide
 
 ---
