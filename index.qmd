@@ -36,7 +36,7 @@ Beyond these specific sources, ...
 
 If you are teaching statistics or within another field that involves extensive use of formulas, this manual could provide a template for making materials compliant with ADA Title II... Specifically, this...
 
-Have existing $\LaTeX$ formulas? You can paste them into Quarto documents, add any additional material you would like (e.g., code), and render to HTML. With different rendering settings, you should be able to produce yeilds *screen readable* formulas. 
+Have existing LaTeX formulas? You can paste them into Quarto documents, add any additional material you would like (e.g., code), and render to HTML. With different rendering settings, you should be able to produce yeilds *screen readable* formulas. 
 
 ---
 ---
