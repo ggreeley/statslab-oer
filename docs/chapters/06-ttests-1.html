@@ -68,7 +68,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../chapters/08-anova.html" rel="next">
+<link href="../chapters/07-ttests-2.html" rel="next">
 <link href="../chapters/05-hypothesis-testing.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -212,32 +212,38 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../chapters/07-ttests-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">T-Tests: Part #2</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../chapters/08-anova.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">One-Way ANOVA</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">One-Way ANOVA</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/08_5-anova-2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Factorial ANOVA</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Factorial ANOVA</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/09-correlation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Correlation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Correlation</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/10-regression.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Regression</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Regression</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -258,12 +264,11 @@ window.Quarto = {
   <ul>
   <li><a href="#key-concepts" id="toc-key-concepts" class="nav-link active" data-scroll-target="#key-concepts"><span class="header-section-number">5.1</span> Key Concepts</a></li>
   <li><a href="#key-formulas" id="toc-key-formulas" class="nav-link" data-scroll-target="#key-formulas"><span class="header-section-number">5.2</span> Key Formulas</a></li>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">5.3</span> Introduction…</a></li>
-  <li><a href="#code-examples" id="toc-code-examples" class="nav-link" data-scroll-target="#code-examples"><span class="header-section-number">5.4</span> Code Examples</a></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">5.5</span> Exercises</a>
+  <li><a href="#code-examples" id="toc-code-examples" class="nav-link" data-scroll-target="#code-examples"><span class="header-section-number">5.3</span> Code Examples</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">5.4</span> Exercises</a>
   <ul class="collapse">
-  <li><a href="#conceptual-questions" id="toc-conceptual-questions" class="nav-link" data-scroll-target="#conceptual-questions"><span class="header-section-number">5.5.1</span> Conceptual Questions</a></li>
-  <li><a href="#computational-questions" id="toc-computational-questions" class="nav-link" data-scroll-target="#computational-questions"><span class="header-section-number">5.5.2</span> Computational Questions</a></li>
+  <li><a href="#conceptual-questions" id="toc-conceptual-questions" class="nav-link" data-scroll-target="#conceptual-questions"><span class="header-section-number">5.4.1</span> Conceptual Questions</a></li>
+  <li><a href="#computational-questions" id="toc-computational-questions" class="nav-link" data-scroll-target="#computational-questions"><span class="header-section-number">5.4.2</span> Computational Questions</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -305,11 +310,8 @@ window.Quarto = {
 <p><span class="math display">\[t = \frac{\bar{D}}{s_D / \sqrt{N}}\]</span></p>
 <p><span class="math display">\[SE = \frac{s}{\sqrt{N}}, \qquad df = N - 1\]</span></p>
 </section>
-<section id="introduction" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="introduction"><span class="header-section-number">5.3</span> Introduction…</h2>
-</section>
-<section id="code-examples" class="level2" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="code-examples"><span class="header-section-number">5.4</span> Code Examples</h2>
+<section id="code-examples" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="code-examples"><span class="header-section-number">5.3</span> Code Examples</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
@@ -327,10 +329,10 @@ window.Quarto = {
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">with</span>(<span class="fu">t.test</span>(bill_length_mm, bill_depth_mm, <span class="at">paired =</span> <span class="cn">TRUE</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="exercises" class="level2" data-number="5.5">
-<h2 data-number="5.5" class="anchored" data-anchor-id="exercises"><span class="header-section-number">5.5</span> Exercises</h2>
-<section id="conceptual-questions" class="level3" data-number="5.5.1">
-<h3 data-number="5.5.1" class="anchored" data-anchor-id="conceptual-questions"><span class="header-section-number">5.5.1</span> Conceptual Questions</h3>
+<section id="exercises" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="exercises"><span class="header-section-number">5.4</span> Exercises</h2>
+<section id="conceptual-questions" class="level3" data-number="5.4.1">
+<h3 data-number="5.4.1" class="anchored" data-anchor-id="conceptual-questions"><span class="header-section-number">5.4.1</span> Conceptual Questions</h3>
 <ol type="1">
 <li><p>Dependent-measures t-tests should be used when:</p>
 <p>A. Whenever possible</p>
@@ -358,8 +360,8 @@ window.Quarto = {
 </ol>
 <hr>
 </section>
-<section id="computational-questions" class="level3" data-number="5.5.2">
-<h3 data-number="5.5.2" class="anchored" data-anchor-id="computational-questions"><span class="header-section-number">5.5.2</span> Computational Questions</h3>
+<section id="computational-questions" class="level3" data-number="5.4.2">
+<h3 data-number="5.4.2" class="anchored" data-anchor-id="computational-questions"><span class="header-section-number">5.4.2</span> Computational Questions</h3>
 <p><em>Note: if direction is not specified, use direction implied by hypothesis.</em></p>
 <p>For each problem: write H₀ and H₁, identify the cutoff value(s), compute the necessary descriptive statistics and t (showing all steps), state your decision, and interpret the result in plain language.</p>
 <hr>
@@ -1146,8 +1148,8 @@ window.Quarto = {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chapters/08-anova.html" class="pagination-link" aria-label="One-Way ANOVA">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">One-Way ANOVA</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/07-ttests-2.html" class="pagination-link" aria-label="T-Tests: Part #2">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">T-Tests: Part #2</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

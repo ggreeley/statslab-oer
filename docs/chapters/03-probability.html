@@ -212,32 +212,38 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../chapters/07-ttests-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">T-Tests: Part #2</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../chapters/08-anova.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">One-Way ANOVA</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">One-Way ANOVA</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/08_5-anova-2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Factorial ANOVA</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Factorial ANOVA</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/09-correlation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Correlation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Correlation</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/10-regression.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Regression</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Regression</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -258,13 +264,12 @@ window.Quarto = {
   <ul>
   <li><a href="#key-concepts" id="toc-key-concepts" class="nav-link active" data-scroll-target="#key-concepts"><span class="header-section-number">2.1</span> Key Concepts</a></li>
   <li><a href="#key-formulas" id="toc-key-formulas" class="nav-link" data-scroll-target="#key-formulas"><span class="header-section-number">2.2</span> Key Formulas</a></li>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">2.3</span> Introduction…</a></li>
-  <li><a href="#code-examples" id="toc-code-examples" class="nav-link" data-scroll-target="#code-examples"><span class="header-section-number">2.4</span> Code Examples</a></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">2.5</span> Exercises</a>
+  <li><a href="#code-examples" id="toc-code-examples" class="nav-link" data-scroll-target="#code-examples"><span class="header-section-number">2.3</span> Code Examples</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">2.4</span> Exercises</a>
   <ul class="collapse">
-  <li><a href="#study-context" id="toc-study-context" class="nav-link" data-scroll-target="#study-context"><span class="header-section-number">2.5.1</span> Study Context</a></li>
-  <li><a href="#conceptual-questions" id="toc-conceptual-questions" class="nav-link" data-scroll-target="#conceptual-questions"><span class="header-section-number">2.5.2</span> Conceptual Questions</a></li>
-  <li><a href="#computational-questions" id="toc-computational-questions" class="nav-link" data-scroll-target="#computational-questions"><span class="header-section-number">2.5.3</span> Computational Questions</a></li>
+  <li><a href="#study-context" id="toc-study-context" class="nav-link" data-scroll-target="#study-context"><span class="header-section-number">2.4.1</span> Study Context</a></li>
+  <li><a href="#conceptual-questions" id="toc-conceptual-questions" class="nav-link" data-scroll-target="#conceptual-questions"><span class="header-section-number">2.4.2</span> Conceptual Questions</a></li>
+  <li><a href="#computational-questions" id="toc-computational-questions" class="nav-link" data-scroll-target="#computational-questions"><span class="header-section-number">2.4.3</span> Computational Questions</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -307,11 +312,8 @@ window.Quarto = {
 <p><span class="math display">\[s = \sqrt{\frac{\sum (X - \bar{X})^2}{N-1}}\]</span></p>
 <p><span class="math display">\[z = \frac{X - \bar{X}}{s}\]</span></p>
 </section>
-<section id="introduction" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="introduction"><span class="header-section-number">2.3</span> Introduction…</h2>
-</section>
-<section id="code-examples" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="code-examples"><span class="header-section-number">2.4</span> Code Examples</h2>
+<section id="code-examples" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="code-examples"><span class="header-section-number">2.3</span> Code Examples</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
@@ -332,10 +334,10 @@ window.Quarto = {
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">8</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="exercises" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="exercises"><span class="header-section-number">2.5</span> Exercises</h2>
-<section id="study-context" class="level3" data-number="2.5.1">
-<h3 data-number="2.5.1" class="anchored" data-anchor-id="study-context"><span class="header-section-number">2.5.1</span> Study Context</h3>
+<section id="exercises" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="exercises"><span class="header-section-number">2.4</span> Exercises</h2>
+<section id="study-context" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="study-context"><span class="header-section-number">2.4.1</span> Study Context</h3>
 <p>A researcher measured how high basketball players can jump (vertical leap), recorded in inches. Before testing, players were randomly assigned to drink either 12 oz of water or 12 oz of “Launch Sauce” (a new beverage aimed at enhancing athletic performance).</p>
 <p><strong>Water Group</strong> (n = 10)</p>
 <table class="caption-top table">
@@ -453,8 +455,8 @@ window.Quarto = {
 </div>
 <hr>
 </section>
-<section id="conceptual-questions" class="level3" data-number="2.5.2">
-<h3 data-number="2.5.2" class="anchored" data-anchor-id="conceptual-questions"><span class="header-section-number">2.5.2</span> Conceptual Questions</h3>
+<section id="conceptual-questions" class="level3" data-number="2.4.2">
+<h3 data-number="2.4.2" class="anchored" data-anchor-id="conceptual-questions"><span class="header-section-number">2.4.2</span> Conceptual Questions</h3>
 <ol type="1">
 <li><p>The formula for the mean of a sample is:</p>
 <p>A. <span class="math inline">\(\bar{X} = \dfrac{\sum X^2}{N}\)</span></p>
@@ -505,8 +507,8 @@ window.Quarto = {
 </ol>
 <hr>
 </section>
-<section id="computational-questions" class="level3" data-number="2.5.3">
-<h3 data-number="2.5.3" class="anchored" data-anchor-id="computational-questions"><span class="header-section-number">2.5.3</span> Computational Questions</h3>
+<section id="computational-questions" class="level3" data-number="2.4.3">
+<h3 data-number="2.4.3" class="anchored" data-anchor-id="computational-questions"><span class="header-section-number">2.4.3</span> Computational Questions</h3>
 <p><em>Use the study data above. Show all work.</em></p>
 <hr>
 <p><strong>Problem 1</strong></p>

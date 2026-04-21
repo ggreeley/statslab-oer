@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>9&nbsp; Regression – Null Hypothesis Significance Testing in Psychology</title>
+<title>10&nbsp; Regression – Null Hypothesis Significance Testing in Psychology</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -149,7 +149,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/10-regression.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Regression</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/10-regression.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Regression</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -212,32 +212,38 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../chapters/07-ttests-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">T-Tests: Part #2</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../chapters/08-anova.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">One-Way ANOVA</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">One-Way ANOVA</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/08_5-anova-2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Factorial ANOVA</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Factorial ANOVA</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/09-correlation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Correlation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Correlation</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/10-regression.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Regression</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Regression</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -256,13 +262,13 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#key-concepts" id="toc-key-concepts" class="nav-link active" data-scroll-target="#key-concepts"><span class="header-section-number">9.1</span> Key Concepts</a></li>
-  <li><a href="#key-formulas" id="toc-key-formulas" class="nav-link" data-scroll-target="#key-formulas"><span class="header-section-number">9.2</span> Key Formulas</a></li>
-  <li><a href="#code-examples" id="toc-code-examples" class="nav-link" data-scroll-target="#code-examples"><span class="header-section-number">9.3</span> Code Examples</a></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">9.4</span> Exercises</a>
+  <li><a href="#key-concepts" id="toc-key-concepts" class="nav-link active" data-scroll-target="#key-concepts"><span class="header-section-number">10.1</span> Key Concepts</a></li>
+  <li><a href="#key-formulas" id="toc-key-formulas" class="nav-link" data-scroll-target="#key-formulas"><span class="header-section-number">10.2</span> Key Formulas</a></li>
+  <li><a href="#code-examples" id="toc-code-examples" class="nav-link" data-scroll-target="#code-examples"><span class="header-section-number">10.3</span> Code Examples</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">10.4</span> Exercises</a>
   <ul class="collapse">
-  <li><a href="#conceptual-questions" id="toc-conceptual-questions" class="nav-link" data-scroll-target="#conceptual-questions"><span class="header-section-number">9.4.1</span> Conceptual Questions</a></li>
-  <li><a href="#computational-questions" id="toc-computational-questions" class="nav-link" data-scroll-target="#computational-questions"><span class="header-section-number">9.4.2</span> Computational Questions</a></li>
+  <li><a href="#conceptual-questions" id="toc-conceptual-questions" class="nav-link" data-scroll-target="#conceptual-questions"><span class="header-section-number">10.4.1</span> Conceptual Questions</a></li>
+  <li><a href="#computational-questions" id="toc-computational-questions" class="nav-link" data-scroll-target="#computational-questions"><span class="header-section-number">10.4.2</span> Computational Questions</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -272,7 +278,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Regression</span></h1>
+<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Regression</span></h1>
 </div>
 
 
@@ -289,8 +295,8 @@ window.Quarto = {
 </header>
 
 
-<section id="key-concepts" class="level2" data-number="9.1">
-<h2 data-number="9.1" class="anchored" data-anchor-id="key-concepts"><span class="header-section-number">9.1</span> Key Concepts</h2>
+<section id="key-concepts" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="key-concepts"><span class="header-section-number">10.1</span> Key Concepts</h2>
 <ul>
 <li>Simple Linear Regression</li>
 <li>Multiple Regression</li>
@@ -298,13 +304,13 @@ window.Quarto = {
 <li>Predicted Values (Ŷ)</li>
 </ul>
 </section>
-<section id="key-formulas" class="level2" data-number="9.2">
-<h2 data-number="9.2" class="anchored" data-anchor-id="key-formulas"><span class="header-section-number">9.2</span> Key Formulas</h2>
+<section id="key-formulas" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="key-formulas"><span class="header-section-number">10.2</span> Key Formulas</h2>
 <p><span class="math display">\[\hat{Y} = bX + a\]</span></p>
 <p><span class="math display">\[b = r \cdot \frac{s_Y}{s_X}, \qquad a = \bar{Y} - b\bar{X}\]</span></p>
 </section>
-<section id="code-examples" class="level2" data-number="9.3">
-<h2 data-number="9.3" class="anchored" data-anchor-id="code-examples"><span class="header-section-number">9.3</span> Code Examples</h2>
+<section id="code-examples" class="level2" data-number="10.3">
+<h2 data-number="10.3" class="anchored" data-anchor-id="code-examples"><span class="header-section-number">10.3</span> Code Examples</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
@@ -319,10 +325,10 @@ window.Quarto = {
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(flipper_length_mm <span class="sc">~</span> bill_length_mm <span class="sc">+</span> body_mass_g, <span class="at">data =</span> penguins_clean) <span class="sc">|&gt;</span> <span class="fu">summary</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="exercises" class="level2" data-number="9.4">
-<h2 data-number="9.4" class="anchored" data-anchor-id="exercises"><span class="header-section-number">9.4</span> Exercises</h2>
-<section id="conceptual-questions" class="level3" data-number="9.4.1">
-<h3 data-number="9.4.1" class="anchored" data-anchor-id="conceptual-questions"><span class="header-section-number">9.4.1</span> Conceptual Questions</h3>
+<section id="exercises" class="level2" data-number="10.4">
+<h2 data-number="10.4" class="anchored" data-anchor-id="exercises"><span class="header-section-number">10.4</span> Exercises</h2>
+<section id="conceptual-questions" class="level3" data-number="10.4.1">
+<h3 data-number="10.4.1" class="anchored" data-anchor-id="conceptual-questions"><span class="header-section-number">10.4.1</span> Conceptual Questions</h3>
 <ol type="1">
 <li><p>Simple regression provides additional information above and beyond correlation, namely estimates for:</p>
 <p>A. Strength and direction</p>
@@ -373,8 +379,8 @@ window.Quarto = {
 </ol>
 <hr>
 </section>
-<section id="computational-questions" class="level3" data-number="9.4.2">
-<h3 data-number="9.4.2" class="anchored" data-anchor-id="computational-questions"><span class="header-section-number">9.4.2</span> Computational Questions</h3>
+<section id="computational-questions" class="level3" data-number="10.4.2">
+<h3 data-number="10.4.2" class="anchored" data-anchor-id="computational-questions"><span class="header-section-number">10.4.2</span> Computational Questions</h3>
 <p><em>Note: show all steps. For each sub-part, plug the given values into the formula and compute Ŷ.</em></p>
 <hr>
 <p><strong>Problem 11</strong> — Simple Regression</p>
@@ -917,12 +923,12 @@ window.Quarto = {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../chapters/09-correlation.html" class="pagination-link" aria-label="Correlation">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Correlation</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Correlation</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../chapters/summary.html" class="pagination-link" aria-label="Summary">
-        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

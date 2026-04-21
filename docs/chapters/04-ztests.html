@@ -212,32 +212,38 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../chapters/07-ttests-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">T-Tests: Part #2</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../chapters/08-anova.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">One-Way ANOVA</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">One-Way ANOVA</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/08_5-anova-2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Factorial ANOVA</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Factorial ANOVA</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/09-correlation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Correlation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Correlation</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/10-regression.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Regression</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Regression</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -258,12 +264,11 @@ window.Quarto = {
   <ul>
   <li><a href="#key-concepts" id="toc-key-concepts" class="nav-link active" data-scroll-target="#key-concepts"><span class="header-section-number">3.1</span> Key Concepts</a></li>
   <li><a href="#key-formulas" id="toc-key-formulas" class="nav-link" data-scroll-target="#key-formulas"><span class="header-section-number">3.2</span> Key Formulas</a></li>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">3.3</span> Introduction…</a></li>
-  <li><a href="#code-examples" id="toc-code-examples" class="nav-link" data-scroll-target="#code-examples"><span class="header-section-number">3.4</span> Code Examples</a></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">3.5</span> Exercises</a>
+  <li><a href="#code-examples" id="toc-code-examples" class="nav-link" data-scroll-target="#code-examples"><span class="header-section-number">3.3</span> Code Examples</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">3.4</span> Exercises</a>
   <ul class="collapse">
-  <li><a href="#conceptual-questions" id="toc-conceptual-questions" class="nav-link" data-scroll-target="#conceptual-questions"><span class="header-section-number">3.5.1</span> Conceptual Questions</a></li>
-  <li><a href="#computational-questions" id="toc-computational-questions" class="nav-link" data-scroll-target="#computational-questions"><span class="header-section-number">3.5.2</span> Computational Questions</a></li>
+  <li><a href="#conceptual-questions" id="toc-conceptual-questions" class="nav-link" data-scroll-target="#conceptual-questions"><span class="header-section-number">3.4.1</span> Conceptual Questions</a></li>
+  <li><a href="#computational-questions" id="toc-computational-questions" class="nav-link" data-scroll-target="#computational-questions"><span class="header-section-number">3.4.2</span> Computational Questions</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -305,11 +310,8 @@ window.Quarto = {
 <p><span class="math display">\[SE = \frac{\sigma}{\sqrt{n}}\]</span></p>
 <p><span class="math display">\[z = \frac{M - \mu}{\sigma / \sqrt{n}}\]</span></p>
 </section>
-<section id="introduction" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="introduction"><span class="header-section-number">3.3</span> Introduction…</h2>
-</section>
-<section id="code-examples" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="code-examples"><span class="header-section-number">3.4</span> Code Examples</h2>
+<section id="code-examples" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="code-examples"><span class="header-section-number">3.3</span> Code Examples</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
@@ -333,10 +335,10 @@ window.Quarto = {
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>X</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="exercises" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="exercises"><span class="header-section-number">3.5</span> Exercises</h2>
-<section id="conceptual-questions" class="level3" data-number="3.5.1">
-<h3 data-number="3.5.1" class="anchored" data-anchor-id="conceptual-questions"><span class="header-section-number">3.5.1</span> Conceptual Questions</h3>
+<section id="exercises" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="exercises"><span class="header-section-number">3.4</span> Exercises</h2>
+<section id="conceptual-questions" class="level3" data-number="3.4.1">
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="conceptual-questions"><span class="header-section-number">3.4.1</span> Conceptual Questions</h3>
 <ol type="1">
 <li><p>The normal distribution is symmetric about its:</p>
 <p>A. Mode only</p>
@@ -387,8 +389,8 @@ window.Quarto = {
 </ol>
 <hr>
 </section>
-<section id="computational-questions" class="level3" data-number="3.5.2">
-<h3 data-number="3.5.2" class="anchored" data-anchor-id="computational-questions"><span class="header-section-number">3.5.2</span> Computational Questions</h3>
+<section id="computational-questions" class="level3" data-number="3.4.2">
+<h3 data-number="3.4.2" class="anchored" data-anchor-id="computational-questions"><span class="header-section-number">3.4.2</span> Computational Questions</h3>
 <p><strong>Reference Population Parameters</strong></p>
 <table class="caption-top table">
 <thead>
@@ -430,8 +432,8 @@ window.Quarto = {
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <hr>
-<section id="part-a-drawing-and-hypothesis-exercises" class="level4" data-number="3.5.2.1">
-<h4 data-number="3.5.2.1" class="anchored" data-anchor-id="part-a-drawing-and-hypothesis-exercises"><span class="header-section-number">3.5.2.1</span> Part A: Drawing and Hypothesis Exercises</h4>
+<section id="part-a-drawing-and-hypothesis-exercises" class="level4" data-number="3.4.2.1">
+<h4 data-number="3.4.2.1" class="anchored" data-anchor-id="part-a-drawing-and-hypothesis-exercises"><span class="header-section-number">3.4.2.1</span> Part A: Drawing and Hypothesis Exercises</h4>
 <p><em>For each scenario: (a) draw and label the normal distribution implied by the relevant population parameters, and (b) write the null and alternative hypotheses in both symbolic and plain-language form.</em></p>
 <hr>
 <p><strong>Exercise 1</strong> — Sleep</p>
@@ -491,8 +493,8 @@ window.Quarto = {
 <p>&nbsp;</p>
 <hr>
 </section>
-<section id="part-b-z-test-decision-problems" class="level4" data-number="3.5.2.2">
-<h4 data-number="3.5.2.2" class="anchored" data-anchor-id="part-b-z-test-decision-problems"><span class="header-section-number">3.5.2.2</span> Part B: z-Test Decision Problems</h4>
+<section id="part-b-z-test-decision-problems" class="level4" data-number="3.4.2.2">
+<h4 data-number="3.4.2.2" class="anchored" data-anchor-id="part-b-z-test-decision-problems"><span class="header-section-number">3.4.2.2</span> Part B: z-Test Decision Problems</h4>
 <p><em>Assume α = .05 unless otherwise noted. Use the population parameters from the table above.</em></p>
 <hr>
 <p><strong>Problem 5</strong> — Sleep (two-tailed)</p>

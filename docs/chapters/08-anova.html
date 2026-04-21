@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>6&nbsp; One-Way ANOVA – Null Hypothesis Significance Testing in Psychology</title>
+<title>7&nbsp; One-Way ANOVA – Null Hypothesis Significance Testing in Psychology</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -69,7 +69,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../chapters/08_5-anova-2.html" rel="next">
-<link href="../chapters/06-ttests-1.html" rel="prev">
+<link href="../chapters/07-ttests-2.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -149,7 +149,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/08-anova.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">One-Way ANOVA</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/08-anova.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">One-Way ANOVA</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -212,32 +212,38 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../chapters/07-ttests-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">T-Tests: Part #2</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../chapters/08-anova.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">One-Way ANOVA</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">One-Way ANOVA</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/08_5-anova-2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Factorial ANOVA</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Factorial ANOVA</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/09-correlation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Correlation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Correlation</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/10-regression.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Regression</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Regression</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -256,13 +262,13 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#key-concepts" id="toc-key-concepts" class="nav-link active" data-scroll-target="#key-concepts"><span class="header-section-number">6.1</span> Key Concepts</a></li>
-  <li><a href="#key-formulas" id="toc-key-formulas" class="nav-link" data-scroll-target="#key-formulas"><span class="header-section-number">6.2</span> Key Formulas</a></li>
-  <li><a href="#code-examples" id="toc-code-examples" class="nav-link" data-scroll-target="#code-examples"><span class="header-section-number">6.3</span> Code Examples</a></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">6.4</span> Exercises</a>
+  <li><a href="#key-concepts" id="toc-key-concepts" class="nav-link active" data-scroll-target="#key-concepts"><span class="header-section-number">7.1</span> Key Concepts</a></li>
+  <li><a href="#key-formulas" id="toc-key-formulas" class="nav-link" data-scroll-target="#key-formulas"><span class="header-section-number">7.2</span> Key Formulas</a></li>
+  <li><a href="#code-examples" id="toc-code-examples" class="nav-link" data-scroll-target="#code-examples"><span class="header-section-number">7.3</span> Code Examples</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">7.4</span> Exercises</a>
   <ul class="collapse">
-  <li><a href="#conceptual-questions" id="toc-conceptual-questions" class="nav-link" data-scroll-target="#conceptual-questions"><span class="header-section-number">6.4.1</span> Conceptual Questions</a></li>
-  <li><a href="#computational-questions" id="toc-computational-questions" class="nav-link" data-scroll-target="#computational-questions"><span class="header-section-number">6.4.2</span> Computational Questions</a></li>
+  <li><a href="#conceptual-questions" id="toc-conceptual-questions" class="nav-link" data-scroll-target="#conceptual-questions"><span class="header-section-number">7.4.1</span> Conceptual Questions</a></li>
+  <li><a href="#computational-questions" id="toc-computational-questions" class="nav-link" data-scroll-target="#computational-questions"><span class="header-section-number">7.4.2</span> Computational Questions</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -272,7 +278,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">One-Way ANOVA</span></h1>
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">One-Way ANOVA</span></h1>
 </div>
 
 
@@ -289,8 +295,8 @@ window.Quarto = {
 </header>
 
 
-<section id="key-concepts" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="key-concepts"><span class="header-section-number">6.1</span> Key Concepts</h2>
+<section id="key-concepts" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="key-concepts"><span class="header-section-number">7.1</span> Key Concepts</h2>
 <ul>
 <li>Normal Distribution</li>
 <li>Variance, Standard Deviation</li>
@@ -298,14 +304,14 @@ window.Quarto = {
 <li>Cut-Off Points</li>
 </ul>
 </section>
-<section id="key-formulas" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="key-formulas"><span class="header-section-number">6.2</span> Key Formulas</h2>
+<section id="key-formulas" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="key-formulas"><span class="header-section-number">7.2</span> Key Formulas</h2>
 <p><span class="math display">\[F = \frac{MS_{between}}{MS_{within}}\]</span></p>
 <p><span class="math display">\[MS_{between} = \frac{SS_{between}}{df_{between}}, \qquad MS_{within} = \frac{SS_{within}}{df_{within}}\]</span></p>
 <p><span class="math display">\[df_{between} = k - 1, \qquad df_{within} = N - k\]</span></p>
 </section>
-<section id="code-examples" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="code-examples"><span class="header-section-number">6.3</span> Code Examples</h2>
+<section id="code-examples" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="code-examples"><span class="header-section-number">7.3</span> Code Examples</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
@@ -321,10 +327,10 @@ window.Quarto = {
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">aov</span>(flipper_length_mm <span class="sc">~</span> species, <span class="at">data =</span> penguins_clean) <span class="sc">|&gt;</span> <span class="fu">summary</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="exercises" class="level2" data-number="6.4">
-<h2 data-number="6.4" class="anchored" data-anchor-id="exercises"><span class="header-section-number">6.4</span> Exercises</h2>
-<section id="conceptual-questions" class="level3" data-number="6.4.1">
-<h3 data-number="6.4.1" class="anchored" data-anchor-id="conceptual-questions"><span class="header-section-number">6.4.1</span> Conceptual Questions</h3>
+<section id="exercises" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="exercises"><span class="header-section-number">7.4</span> Exercises</h2>
+<section id="conceptual-questions" class="level3" data-number="7.4.1">
+<h3 data-number="7.4.1" class="anchored" data-anchor-id="conceptual-questions"><span class="header-section-number">7.4.1</span> Conceptual Questions</h3>
 <ol type="1">
 <li><p>The main purpose of a one-way ANOVA is to:</p>
 <p>A. Test whether the variance of one sample equals another sample</p>
@@ -379,8 +385,8 @@ window.Quarto = {
 </ol>
 <hr>
 </section>
-<section id="computational-questions" class="level3" data-number="6.4.2">
-<h3 data-number="6.4.2" class="anchored" data-anchor-id="computational-questions"><span class="header-section-number">6.4.2</span> Computational Questions</h3>
+<section id="computational-questions" class="level3" data-number="7.4.2">
+<h3 data-number="7.4.2" class="anchored" data-anchor-id="computational-questions"><span class="header-section-number">7.4.2</span> Computational Questions</h3>
 <p><em>Note: if direction is not specified, use direction implied by hypothesis.</em></p>
 <p>For each problem:</p>
 <ul>
@@ -928,13 +934,13 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../chapters/06-ttests-1.html" class="pagination-link" aria-label="T-Tests: Part #1">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">T-Tests: Part #1</span></span>
+      <a href="../chapters/07-ttests-2.html" class="pagination-link" aria-label="T-Tests: Part #2">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">T-Tests: Part #2</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../chapters/08_5-anova-2.html" class="pagination-link" aria-label="Factorial ANOVA">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Factorial ANOVA</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Factorial ANOVA</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
