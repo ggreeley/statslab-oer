@@ -15,8 +15,6 @@ $$SE = \frac{\sigma}{\sqrt{n}}$$
 
 $$z = \frac{M - \mu}{\sigma / \sqrt{n}}$$
 
-## Introduction...
-
 ## Code Examples
 
 ```{r}

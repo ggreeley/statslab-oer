@@ -16,10 +16,6 @@ $$SE = \frac{\sigma}{\sqrt{n}}$$
 
 $$\text{Power} = 1 - \beta$$
 
-## Introduction...
-
-Begin...
-
 ## Code Examples
 
 ```{r}

@@ -17,8 +17,6 @@ $$s = \sqrt{\frac{\sum (X - \bar{X})^2}{N-1}}$$
 
 $$z = \frac{X - \bar{X}}{s}$$
 
-## Introduction...
-
 ## Code Examples
 
 ```{r}

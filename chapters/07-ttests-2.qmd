@@ -2,10 +2,10 @@
 
 ## Key Concepts
 
-- Normal Distribution
-- Variance, Standard Deviation
-- Probability Values
-- Cut-Off Points
+- Independent Samples (Between-Subjects) Design
+- Pooled Variance
+- Degrees of Freedom
+- Standard Error of the Difference
 
 ## Key Formulas
 
@@ -37,3 +37,190 @@ penguins |>
   group_by(species) |>
   summarise(M = mean(flipper_length_mm), SD = sd(flipper_length_mm), n = n())
 ```
+
+## Exercises
+
+### Conceptual Questions
+
+1. In hypothesis testing, the p-value represents:
+
+   A. The probability that the null hypothesis is true
+
+   B. The probability of obtaining a result at least as extreme as the observed data, given H₀ is true
+
+   C. The proportion of participants showing the effect
+
+   D. Effect size
+
+2. As degrees of freedom increase, the shape of the t-distribution:
+
+   A. Becomes wider and flatter
+
+   B. Becomes identical to the chi-square distribution
+
+   C. Becomes narrower and more similar to the normal distribution
+
+   D. Remains unchanged
+
+3. A one-tailed test is appropriate when:
+
+   A. The researcher predicts a specific direction of the effect
+
+   B. No direction is predicted
+
+   C. The sample variance is unknown
+
+   D. The study is underpowered
+
+4. If sample size increases, the standard error will:
+
+   A. Increase
+
+   B. Decrease
+
+   C. Stay the same
+
+   D. Equal the standard deviation
+
+5. If α = .01 instead of .05, what happens?
+
+   A. Type I error risk increases
+
+   B. Type I error risk decreases
+
+   C. Power increases
+
+   D. Power stays the same
+
+6. Statistical significance means:
+
+   A. The result is guaranteed to be practically important
+
+   B. The observed effect, or a more extreme effect, is likely assuming H₀
+
+   C. The observed effect, or a more extreme effect, is unlikely assuming H₀
+
+   D. The sample size is large
+
+7. If an independent-means t-test yields t(18) = 2.45, p = .025 (two-tailed; α = .05), the correct decision is:
+
+   A. Fail to reject H₀
+
+   B. Reject H₀
+
+   C. Accept H₁ at α = .05
+
+   D. Unknown
+
+8. Which of the following assumptions does NOT apply to any kind of t-test?
+
+   A. Observations are independent within each group
+
+   B. Homogeneity of variance across groups
+
+   C. Equal sample sizes
+
+   D. All of the above
+
+9. A one-sample t-test reports df = 374. What was N?
+
+   A. 375
+
+   B. 374
+
+   C. 376
+
+   D. None of the above
+
+---
+
+### Computational Questions
+
+*Note: if direction is not specified, use direction implied by hypothesis.*
+
+For each problem: write H₀ and H₁, identify the cutoff value(s), compute all descriptive statistics and t (showing all steps), state your decision, and interpret the result in plain language.
+
+---
+
+**Problem 1** *(25 points)*
+
+A researcher wants to know whether listening to classical music improves concentration. Eight participants complete a concentration task after sitting in silence for 15 minutes; a separate group of eight complete the same task after listening to 15 minutes of classical music. Higher scores indicate better concentration. Conduct the appropriate test at α = .05.
+
+| Participant | Silence | Participant | Music |
+|:-----------:|:-------:|:-----------:|:-----:|
+| 1 | 72 | 1 | 80 |
+| 2 | 68 | 2 | 78 |
+| 3 | 74 | 3 | 82 |
+| 4 | 70 | 4 | 75 |
+| 5 | 69 | 5 | 79 |
+| 6 | 71 | 6 | 77 |
+| 7 | 73 | 7 | 83 |
+| 8 | 67 | 8 | 81 |
+
+```{r}
+#| eval: false
+silence <- c(72, 68, 74, 70, 69, 71, 73, 67)
+music   <- c(80, 78, 82, 75, 79, 77, 83, 81)
+alpha   <- 0.05
+```
+
+Compute the following for each group:
+
+| Statistic | Silence | Music |
+|:---|:---:|:---:|
+| Sum = | | |
+| N = | | |
+| Mean = | | |
+| SS = | | |
+| df = | | |
+
+Compute pooled variance, SE, and t:
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+Write H₀/H₁ and determine the cutoff value:
+
+&nbsp;
+
+State your decision and interpret:
+
+&nbsp;
+
+&nbsp;
+
+---
+
+**Problem 2** *(5 points)*
+
+A researcher compares reaction times between caffeine and placebo groups, expecting a reduction in reaction times following caffeine consumption. Name and conduct the appropriate t-test at α = .01. State hypotheses, show all steps, and interpret.
+
+| Parameter | Caffeine | Placebo |
+|:---|:---:|:---:|
+| N | 12 | 12 |
+| Mean (M) | 248 ms | 262 ms |
+| SD | 15 | 18 |
+
+```{r}
+#| eval: false
+M_caffeine <- 248; SD_caffeine <- 15; n_caffeine <- 12
+M_placebo  <- 262; SD_placebo  <- 18; n_placebo  <- 12
+alpha      <- 0.01
+```
+
+Compute SS, pooled variance, SE, df, and t:
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+Write H₀/H₁, determine cutoff, state decision, and interpret:
+
+&nbsp;
+
+&nbsp;

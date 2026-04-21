@@ -1,3 +1,7 @@
 # Summary
 
-In summary, this book has no content whatsoever.
+If you've made it this far, congratulations! You've learned about most of the statistics you will see in psychology journals (and use yourself in any future psychology research projects).
+
+While there is always more to learn, that is for future classes. 
+
+Feel free to come back to this lab manual for a reference on these fundamentals, or even just to grab code snippets.

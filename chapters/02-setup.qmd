@@ -1,6 +1,6 @@
 # Setup
 
-As part of this course, you have the ability to complete assignments (or parts of assignments) using R or Python. Getting set up with these tools is often a hurdle when first starting out. Python, in particular, could be a chore as there were many different ways to install the language itself and manage packages. 
+As part of this course, you have the ability to complete assignments (or parts of assignments) using R. Getting set up with these tools is often a hurdle when first starting out. 
 
 ## Getting Started with R
 

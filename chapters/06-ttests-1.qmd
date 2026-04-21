@@ -15,8 +15,6 @@ $$t = \frac{\bar{D}}{s_D / \sqrt{N}}$$
 
 $$SE = \frac{s}{\sqrt{N}}, \qquad df = N - 1$$
 
-## Introduction...
-
 ## Code Examples
 
 ```{r}
